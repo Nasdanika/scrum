@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.nasdanika.scrum/src" modelPluginID="org.nasdanika.scrum"
+    modelName="nasdanika-scrum" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
+    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" reflectiveDelegation="true"
+    importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective" complianceLevel="8.0"
+    suppressGenModelAnnotations="false" copyrightFields="false" providerRootExtendsClass="org.nasdanika.scrum.provider.CDOItemProviderAdapterEx"
+    usedGenPackages="../../org.nasdanika.cdo.security/model/security.genmodel#//security"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>nasdanika-scrum.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Scrum" basePackage="org.nasdanika" disposableProviderFactory="true"
+      ecorePackage="nasdanika-scrum.ecore#/">
+    <genClasses image="false" ecoreClass="nasdanika-scrum.ecore#//ModelElement">
+      <genOperations ecoreOperation="nasdanika-scrum.ecore#//ModelElement/validate">
+        <genParameters ecoreParameter="nasdanika-scrum.ecore#//ModelElement/validate/diagnostics"/>
+        <genParameters ecoreParameter="nasdanika-scrum.ecore#//ModelElement/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="nasdanika-scrum.ecore#//ScrumRealm"/>
+  </genPackages>
+</genmodel:GenModel>

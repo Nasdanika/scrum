@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.nasdanika.scrum.app
+Bundle-SymbolicName: org.nasdanika.scrum.app; singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.emf.ecore,
+ org.nasdanika.cdo.h2,
+ org.apache.commons.lang3;bundle-version="3.3.2",
+ org.eclipse.emf.cdo,
+ org.nasdanika.cdo.web,
+ org.nasdanika.cdo.web.doc,
+ org.nasdanika.scrum,
+ org.nasdanika.cdo,
+ org.eclipse.equinox.http.registry
+Service-Component: OSGI-INF/nasdanika-scrum-session-initializer.xml,
+ OSGI-INF/nasdanika-scrum-repository.xml,
+ OSGI-INF/nasdanika-scrum-server.xml,
+ OSGI-INF/nasdanika-scrum-cdo-transaction-context-provider.xml,
+ OSGI-INF/nasdanika-scrum-doc-route.xml
+Bundle-ActivationPolicy: lazy

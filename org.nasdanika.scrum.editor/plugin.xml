@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated nasdanika-scrum -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.nasdanika.scrum.presentation.ScrumModelWizardID"
+            name="%_UI_ScrumModelWizard_label"
+            class="org.nasdanika.scrum.presentation.ScrumModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ScrumModelFile.gif">
+         <description>%_UI_ScrumModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated nasdanika-scrum -->
+      <editor
+            id="org.nasdanika.scrum.presentation.ScrumEditorID"
+            name="%_UI_ScrumEditor_label"
+            icon="icons/full/obj16/ScrumModelFile.gif"
+            extensions="scrum"
+            class="org.nasdanika.scrum.presentation.ScrumEditor"
+            contributorClass="org.nasdanika.scrum.presentation.ScrumActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

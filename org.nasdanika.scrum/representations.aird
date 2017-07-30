@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_PH--wHU5Eee-7b_idLPtYQ" selectedViews="_QiIBgHU5Eee-7b_idLPtYQ" version="12.0.0.201704271200">
+    <semanticResources>model/nasdanika-scrum.ecore</semanticResources>
+    <semanticResources>model/nasdanika-scrum.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.nasdanika.cdo.security/model/security.ecore</semanticResources>
+    <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
+    <semanticResources>platform:/resource/org.nasdanika.cdo.security/model/security.genmodel</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_QiIBgHU5Eee-7b_idLPtYQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_UqXCN3U5Eee-7b_idLPtYQ" name="scrum class diagram" repPath="#_UqXCMHU5Eee-7b_idLPtYQ">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+        <target xmi:type="ecore:EPackage" href="model/nasdanika-scrum.ecore#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram xmi:id="_UqXCMHU5Eee-7b_idLPtYQ" name="scrum class diagram">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_UqXCMXU5Eee-7b_idLPtYQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_UqXCMnU5Eee-7b_idLPtYQ"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_UqzHEHU5Eee-7b_idLPtYQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_UqzHEXU5Eee-7b_idLPtYQ" type="Sirius" element="_UqXCMHU5Eee-7b_idLPtYQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_YjTpsHU5Eee-7b_idLPtYQ" type="2003" element="_YjEZIHU5Eee-7b_idLPtYQ">
+          <children xmi:type="notation:Node" xmi:id="_YjUQwHU5Eee-7b_idLPtYQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_YjWF8HU5Eee-7b_idLPtYQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_31ALAHU5Eee-7b_idLPtYQ" type="3010" element="_302aAHU5Eee-7b_idLPtYQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_31ALAXU5Eee-7b_idLPtYQ" fontColor="8224125" fontName="Segoe UI" fontHeight="8" italic="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_31ALAnU5Eee-7b_idLPtYQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_31ALA3U5Eee-7b_idLPtYQ" type="3010" element="_302aAnU5Eee-7b_idLPtYQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_31ALBHU5Eee-7b_idLPtYQ" fontColor="8224125" fontName="Segoe UI" fontHeight="8" italic="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_31ALBXU5Eee-7b_idLPtYQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_31ALBnU5Eee-7b_idLPtYQ" type="3010" element="_302aBHU5Eee-7b_idLPtYQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_31ALB3U5Eee-7b_idLPtYQ" fontColor="8224125" fontName="Segoe UI" fontHeight="8" italic="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_31ALCHU5Eee-7b_idLPtYQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_31ALCXU5Eee-7b_idLPtYQ" type="3010" element="_302aBnU5Eee-7b_idLPtYQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_31ALCnU5Eee-7b_idLPtYQ" fontColor="8224125" fontName="Segoe UI" fontHeight="8" italic="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_31ALC3U5Eee-7b_idLPtYQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_YjWF8XU5Eee-7b_idLPtYQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_YjWF8nU5Eee-7b_idLPtYQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_YjTpsXU5Eee-7b_idLPtYQ" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YjTpsnU5Eee-7b_idLPtYQ" x="600" y="132"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_UqzHEnU5Eee-7b_idLPtYQ"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_YjEZIHU5Eee-7b_idLPtYQ" name="ScrumRealm" tooltipText="" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="model/nasdanika-scrum.ecore#//ScrumRealm"/>
+      <semanticElements xmi:type="ecore:EClass" href="model/nasdanika-scrum.ecore#//ScrumRealm"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_YjEZIXU5Eee-7b_idLPtYQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_302aAHU5Eee-7b_idLPtYQ" name=" administrators : User" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/org.nasdanika.cdo.security/model/security.ecore#//Realm/administrators"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/org.nasdanika.cdo.security/model/security.ecore#//Realm/administrators"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_302aAXU5Eee-7b_idLPtYQ" labelColor="125,125,125" labelAlignment="LEFT">
+          <labelFormat>italic</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_302aAnU5Eee-7b_idLPtYQ" name=" guest : Principal" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/org.nasdanika.cdo.security/model/security.ecore#//Realm/guest"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/org.nasdanika.cdo.security/model/security.ecore#//Realm/guest"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_302aA3U5Eee-7b_idLPtYQ" labelColor="125,125,125" labelAlignment="LEFT">
+          <labelFormat>italic</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_302aBHU5Eee-7b_idLPtYQ" name=" everyone : Principal" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/org.nasdanika.cdo.security/model/security.ecore#//Realm/everyone"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/org.nasdanika.cdo.security/model/security.ecore#//Realm/everyone"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_302aBXU5Eee-7b_idLPtYQ" labelColor="125,125,125" labelAlignment="LEFT">
+          <labelFormat>italic</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_302aBnU5Eee-7b_idLPtYQ" name=" packages : Package" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/org.nasdanika.cdo.security/model/security.ecore#//Realm/packages"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/org.nasdanika.cdo.security/model/security.ecore#//Realm/packages"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_302aB3U5Eee-7b_idLPtYQ" labelColor="125,125,125" labelAlignment="LEFT">
+          <labelFormat>italic</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_UqXCNnU5Eee-7b_idLPtYQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+    <target xmi:type="ecore:EPackage" href="model/nasdanika-scrum.ecore#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

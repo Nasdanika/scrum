@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	
+	   <feature url="features/org.nasdanika.scrum.feature_0.1.0.qualifier.jar" id="org.nasdanika.scrum.feature" version="0.1.0.qualifier">
+	      <category name="org.nasdanika.scrum.category"/>
+	   </feature>
+	   <feature url="features/org.nasdanika.scrum.editor.feature_0.1.0.qualifier.jar" id="org.nasdanika.scrum.editor.feature" version="0.1.0.qualifier">
+	      <category name="org.nasdanika.tools"/>
+	   </feature>
+   <category-def name="org.nasdanika.scrum.category" label="Nasdanika Scrum">
+      <description>
+         Nasdanika Scrum Web Application.
+      </description>
+   </category-def>
+   <category-def name="org.nasdanika.tools" label="Tools">
+      <description>
+         Eclipse IDE plug-ins.
+      </description>
+   </category-def>
+</site>
