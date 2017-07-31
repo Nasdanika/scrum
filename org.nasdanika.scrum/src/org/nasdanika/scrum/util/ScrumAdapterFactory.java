@@ -75,8 +75,104 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 				return createModelElementAdapter();
 			}
 			@Override
+			public Adapter caseNote(Note object) {
+				return createNoteAdapter();
+			}
+			@Override
 			public Adapter caseScrumRealm(ScrumRealm object) {
 				return createScrumRealmAdapter();
+			}
+			@Override
+			public Adapter caseParty(Party object) {
+				return createPartyAdapter();
+			}
+			@Override
+			public Adapter caseOrganization(Organization object) {
+				return createOrganizationAdapter();
+			}
+			@Override
+			public Adapter casePerson(Person object) {
+				return createPersonAdapter();
+			}
+			@Override
+			public Adapter caseMember(Member object) {
+				return createMemberAdapter();
+			}
+			@Override
+			public Adapter caseAbstractProduct(AbstractProduct object) {
+				return createAbstractProductAdapter();
+			}
+			@Override
+			public Adapter caseProduct(Product object) {
+				return createProductAdapter();
+			}
+			@Override
+			public Adapter caseTargetGroup(TargetGroup object) {
+				return createTargetGroupAdapter();
+			}
+			@Override
+			public Adapter caseNeed(Need object) {
+				return createNeedAdapter();
+			}
+			@Override
+			public Adapter caseProductCategory(ProductCategory object) {
+				return createProductCategoryAdapter();
+			}
+			@Override
+			public Adapter caseFunctionality(Functionality object) {
+				return createFunctionalityAdapter();
+			}
+			@Override
+			public Adapter caseEpic(Epic object) {
+				return createEpicAdapter();
+			}
+			@Override
+			public Adapter caseFeature(Feature object) {
+				return createFeatureAdapter();
+			}
+			@Override
+			public Adapter caseUserStory(UserStory object) {
+				return createUserStoryAdapter();
+			}
+			@Override
+			public Adapter caseTask(Task object) {
+				return createTaskAdapter();
+			}
+			@Override
+			public Adapter caseRelease(Release object) {
+				return createReleaseAdapter();
+			}
+			@Override
+			public Adapter caseSprint(Sprint object) {
+				return createSprintAdapter();
+			}
+			@Override
+			public Adapter caseArtifact(Artifact object) {
+				return createArtifactAdapter();
+			}
+			@Override
+			public Adapter caseTheme(Theme object) {
+				return createThemeAdapter();
+			}
+			@Override
+			public Adapter caseProductUser(ProductUser object) {
+				return createProductUserAdapter();
+			}
+			@Override
+			public Adapter caseInteraction(Interaction object) {
+				return createInteractionAdapter();
+			}
+			@Override
+			public Adapter caseScrumTeam(ScrumTeam object) {
+				return createScrumTeamAdapter();
+			}
+			@Override
+			public Adapter caseDevelopmentTeam(DevelopmentTeam object) {
+				return createDevelopmentTeamAdapter();
+			}
+			@Override
+			public Adapter caseFunding(Funding object) {
+				return createFundingAdapter();
 			}
 			@Override
 			public <CR> Adapter caseRealm(Realm<CR> object) {
@@ -121,6 +217,20 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Note <em>Note</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Note
+	 * @generated
+	 */
+	public Adapter createNoteAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.ScrumRealm <em>Realm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -131,6 +241,328 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createScrumRealmAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Party <em>Party</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Party
+	 * @generated
+	 */
+	public Adapter createPartyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Organization <em>Organization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Organization
+	 * @generated
+	 */
+	public Adapter createOrganizationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Person <em>Person</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Person
+	 * @generated
+	 */
+	public Adapter createPersonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Member <em>Member</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Member
+	 * @generated
+	 */
+	public Adapter createMemberAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.AbstractProduct <em>Abstract Product</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.AbstractProduct
+	 * @generated
+	 */
+	public Adapter createAbstractProductAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Product <em>Product</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Product
+	 * @generated
+	 */
+	public Adapter createProductAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.TargetGroup <em>Target Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.TargetGroup
+	 * @generated
+	 */
+	public Adapter createTargetGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Need <em>Need</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Need
+	 * @generated
+	 */
+	public Adapter createNeedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.ProductCategory <em>Product Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.ProductCategory
+	 * @generated
+	 */
+	public Adapter createProductCategoryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Functionality <em>Functionality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Functionality
+	 * @generated
+	 */
+	public Adapter createFunctionalityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Epic <em>Epic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Epic
+	 * @generated
+	 */
+	public Adapter createEpicAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Feature <em>Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Feature
+	 * @generated
+	 */
+	public Adapter createFeatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.UserStory <em>User Story</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.UserStory
+	 * @generated
+	 */
+	public Adapter createUserStoryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Task <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Task
+	 * @generated
+	 */
+	public Adapter createTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Release <em>Release</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Release
+	 * @generated
+	 */
+	public Adapter createReleaseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Sprint <em>Sprint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Sprint
+	 * @generated
+	 */
+	public Adapter createSprintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Artifact <em>Artifact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Artifact
+	 * @generated
+	 */
+	public Adapter createArtifactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Theme <em>Theme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Theme
+	 * @generated
+	 */
+	public Adapter createThemeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.ProductUser <em>Product User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.ProductUser
+	 * @generated
+	 */
+	public Adapter createProductUserAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Interaction <em>Interaction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Interaction
+	 * @generated
+	 */
+	public Adapter createInteractionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.ScrumTeam <em>Team</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.ScrumTeam
+	 * @generated
+	 */
+	public Adapter createScrumTeamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.DevelopmentTeam <em>Development Team</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.DevelopmentTeam
+	 * @generated
+	 */
+	public Adapter createDevelopmentTeamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Funding <em>Funding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Funding
+	 * @generated
+	 */
+	public Adapter createFundingAdapter() {
 		return null;
 	}
 

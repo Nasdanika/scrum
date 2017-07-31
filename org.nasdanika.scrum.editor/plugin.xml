@@ -9,13 +9,13 @@
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated nasdanika-scrum -->
       <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            id="org.nasdanika"
             name="%_UI_Wizard_category"/>
       <wizard
             id="org.nasdanika.scrum.presentation.ScrumModelWizardID"
             name="%_UI_ScrumModelWizard_label"
             class="org.nasdanika.scrum.presentation.ScrumModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            category="org.nasdanika"
             icon="icons/full/obj16/ScrumModelFile.gif">
          <description>%_UI_ScrumModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -28,7 +28,7 @@
             id="org.nasdanika.scrum.presentation.ScrumEditorID"
             name="%_UI_ScrumEditor_label"
             icon="icons/full/obj16/ScrumModelFile.gif"
-            extensions="scrum"
+            extensions="nsd_scrum"
             class="org.nasdanika.scrum.presentation.ScrumEditor"
             contributorClass="org.nasdanika.scrum.presentation.ScrumActionBarContributor">
       </editor>

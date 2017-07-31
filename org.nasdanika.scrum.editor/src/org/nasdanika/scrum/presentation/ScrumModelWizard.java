@@ -363,7 +363,7 @@ public class ScrumModelWizard extends Wizard implements INewWizard {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected Combo initialObjectField;
+//		protected Combo initialObjectField;
 
 		/**
 		 * @generated
@@ -418,22 +418,22 @@ public class ScrumModelWizard extends Wizard implements INewWizard {
 				containerLabel.setLayoutData(data);
 			}
 
-			initialObjectField = new Combo(composite, SWT.BORDER);
-			{
-				GridData data = new GridData();
-				data.horizontalAlignment = GridData.FILL;
-				data.grabExcessHorizontalSpace = true;
-				initialObjectField.setLayoutData(data);
-			}
-
-			for (String objectName : getInitialObjectNames()) {
-				initialObjectField.add(getLabel(objectName));
-			}
-
-			if (initialObjectField.getItemCount() == 1) {
-				initialObjectField.select(0);
-			}
-			initialObjectField.addModifyListener(validator);
+//			initialObjectField = new Combo(composite, SWT.BORDER);
+//			{
+//				GridData data = new GridData();
+//				data.horizontalAlignment = GridData.FILL;
+//				data.grabExcessHorizontalSpace = true;
+//				initialObjectField.setLayoutData(data);
+//			}
+//
+//			for (String objectName : getInitialObjectNames()) {
+//				initialObjectField.add(getLabel(objectName));
+//			}
+//
+//			if (initialObjectField.getItemCount() == 1) {
+//				initialObjectField.select(0);
+//			}
+//			initialObjectField.addModifyListener(validator);
 
 			Label encodingLabel = new Label(composite, SWT.LEFT);
 			{
@@ -491,16 +491,16 @@ public class ScrumModelWizard extends Wizard implements INewWizard {
 		@Override
 		public void setVisible(boolean visible) {
 			super.setVisible(visible);
-			if (visible) {
-				if (initialObjectField.getItemCount() == 1) {
-					initialObjectField.clearSelection();
-					encodingField.setFocus();
-				}
-				else {
-					encodingField.clearSelection();
-					initialObjectField.setFocus();
-				}
-			}
+//			if (visible) {
+//				if (initialObjectField.getItemCount() == 1) {
+//					initialObjectField.clearSelection();
+//					encodingField.setFocus();
+//				}
+//				else {
+//					encodingField.clearSelection();
+//					initialObjectField.setFocus();
+//				}
+//			}
 		}
 
 		/**
@@ -508,15 +508,16 @@ public class ScrumModelWizard extends Wizard implements INewWizard {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public String getInitialObjectName() {
-			String label = initialObjectField.getText();
-
-			for (String name : getInitialObjectNames()) {
-				if (getLabel(name).equals(label)) {
-					return name;
-				}
-			}
-			return null;
+		public String getInitialObjectName() {		
+			return "ScrumRealm";
+//			String label = initialObjectField.getText();
+//
+//			for (String name : getInitialObjectNames()) {
+//				if (getLabel(name).equals(label)) {
+//					return name;
+//				}
+//			}
+//			return null;
 		}
 
 		/**

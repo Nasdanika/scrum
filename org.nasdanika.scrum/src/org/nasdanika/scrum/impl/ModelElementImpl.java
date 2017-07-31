@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.nasdanika.scrum.ModelElement;
+import org.nasdanika.scrum.Note;
 import org.nasdanika.scrum.ScrumPackage;
 import org.nasdanika.scrum.util.ScrumValidator;
 
@@ -22,6 +23,14 @@ import org.nasdanika.scrum.util.ScrumValidator;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Model Element</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.nasdanika.scrum.impl.ModelElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.ModelElementImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.ModelElementImpl#getNotes <em>Notes</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -53,6 +62,52 @@ public abstract class ModelElementImpl extends CDOObjectImpl implements ModelEle
 	@Override
 	protected int eStaticFeatureCount() {
 		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return (String)eGet(ScrumPackage.Literals.MODEL_ELEMENT__NAME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		eSet(ScrumPackage.Literals.MODEL_ELEMENT__NAME, newName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return (String)eGet(ScrumPackage.Literals.MODEL_ELEMENT__DESCRIPTION, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		eSet(ScrumPackage.Literals.MODEL_ELEMENT__DESCRIPTION, newDescription);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Note> getNotes() {
+		return (EList<Note>)eGet(ScrumPackage.Literals.MODEL_ELEMENT__NOTES, true);
 	}
 
 	/**

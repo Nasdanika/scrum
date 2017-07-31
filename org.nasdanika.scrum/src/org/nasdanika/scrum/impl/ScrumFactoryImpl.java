@@ -56,7 +56,29 @@ public class ScrumFactoryImpl extends EFactoryImpl implements ScrumFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ScrumPackage.NOTE: return (EObject)createNote();
 			case ScrumPackage.SCRUM_REALM: return (EObject)createScrumRealm();
+			case ScrumPackage.ORGANIZATION: return (EObject)createOrganization();
+			case ScrumPackage.PERSON: return (EObject)createPerson();
+			case ScrumPackage.MEMBER: return (EObject)createMember();
+			case ScrumPackage.ABSTRACT_PRODUCT: return (EObject)createAbstractProduct();
+			case ScrumPackage.PRODUCT: return (EObject)createProduct();
+			case ScrumPackage.TARGET_GROUP: return (EObject)createTargetGroup();
+			case ScrumPackage.NEED: return (EObject)createNeed();
+			case ScrumPackage.PRODUCT_CATEGORY: return (EObject)createProductCategory();
+			case ScrumPackage.EPIC: return (EObject)createEpic();
+			case ScrumPackage.FEATURE: return (EObject)createFeature();
+			case ScrumPackage.USER_STORY: return (EObject)createUserStory();
+			case ScrumPackage.TASK: return (EObject)createTask();
+			case ScrumPackage.RELEASE: return (EObject)createRelease();
+			case ScrumPackage.SPRINT: return (EObject)createSprint();
+			case ScrumPackage.ARTIFACT: return (EObject)createArtifact();
+			case ScrumPackage.THEME: return (EObject)createTheme();
+			case ScrumPackage.PRODUCT_USER: return (EObject)createProductUser();
+			case ScrumPackage.INTERACTION: return (EObject)createInteraction();
+			case ScrumPackage.SCRUM_TEAM: return (EObject)createScrumTeam();
+			case ScrumPackage.DEVELOPMENT_TEAM: return (EObject)createDevelopmentTeam();
+			case ScrumPackage.FUNDING: return (EObject)createFunding();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -67,9 +89,229 @@ public class ScrumFactoryImpl extends EFactoryImpl implements ScrumFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Note createNote() {
+		NoteImpl note = new NoteImpl();
+		return note;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ScrumRealm createScrumRealm() {
 		ScrumRealmImpl scrumRealm = new ScrumRealmImpl();
 		return scrumRealm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Organization createOrganization() {
+		OrganizationImpl organization = new OrganizationImpl();
+		return organization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Person createPerson() {
+		PersonImpl person = new PersonImpl();
+		return person;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Member createMember() {
+		MemberImpl member = new MemberImpl();
+		return member;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractProduct createAbstractProduct() {
+		AbstractProductImpl abstractProduct = new AbstractProductImpl();
+		return abstractProduct;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Product createProduct() {
+		ProductImpl product = new ProductImpl();
+		return product;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TargetGroup createTargetGroup() {
+		TargetGroupImpl targetGroup = new TargetGroupImpl();
+		return targetGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Need createNeed() {
+		NeedImpl need = new NeedImpl();
+		return need;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProductCategory createProductCategory() {
+		ProductCategoryImpl productCategory = new ProductCategoryImpl();
+		return productCategory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Epic createEpic() {
+		EpicImpl epic = new EpicImpl();
+		return epic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Feature createFeature() {
+		FeatureImpl feature = new FeatureImpl();
+		return feature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserStory createUserStory() {
+		UserStoryImpl userStory = new UserStoryImpl();
+		return userStory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Task createTask() {
+		TaskImpl task = new TaskImpl();
+		return task;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Release createRelease() {
+		ReleaseImpl release = new ReleaseImpl();
+		return release;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Sprint createSprint() {
+		SprintImpl sprint = new SprintImpl();
+		return sprint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Artifact createArtifact() {
+		ArtifactImpl artifact = new ArtifactImpl();
+		return artifact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Theme createTheme() {
+		ThemeImpl theme = new ThemeImpl();
+		return theme;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProductUser createProductUser() {
+		ProductUserImpl productUser = new ProductUserImpl();
+		return productUser;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Interaction createInteraction() {
+		InteractionImpl interaction = new InteractionImpl();
+		return interaction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ScrumTeam createScrumTeam() {
+		ScrumTeamImpl scrumTeam = new ScrumTeamImpl();
+		return scrumTeam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DevelopmentTeam createDevelopmentTeam() {
+		DevelopmentTeamImpl developmentTeam = new DevelopmentTeamImpl();
+		return developmentTeam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Funding createFunding() {
+		FundingImpl funding = new FundingImpl();
+		return funding;
 	}
 
 	/**

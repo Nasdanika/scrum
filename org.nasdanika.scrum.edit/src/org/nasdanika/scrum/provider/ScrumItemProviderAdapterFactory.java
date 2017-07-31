@@ -72,6 +72,29 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Note} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NoteItemProvider noteItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Note}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNoteAdapter() {
+		if (noteItemProvider == null) {
+			noteItemProvider = new NoteItemProvider(this);
+		}
+
+		return noteItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.ScrumRealm} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +115,489 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 		}
 
 		return scrumRealmItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Organization} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OrganizationItemProvider organizationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Organization}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOrganizationAdapter() {
+		if (organizationItemProvider == null) {
+			organizationItemProvider = new OrganizationItemProvider(this);
+		}
+
+		return organizationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Person} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PersonItemProvider personItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Person}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPersonAdapter() {
+		if (personItemProvider == null) {
+			personItemProvider = new PersonItemProvider(this);
+		}
+
+		return personItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Member} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MemberItemProvider memberItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Member}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMemberAdapter() {
+		if (memberItemProvider == null) {
+			memberItemProvider = new MemberItemProvider(this);
+		}
+
+		return memberItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.AbstractProduct} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AbstractProductItemProvider abstractProductItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.AbstractProduct}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAbstractProductAdapter() {
+		if (abstractProductItemProvider == null) {
+			abstractProductItemProvider = new AbstractProductItemProvider(this);
+		}
+
+		return abstractProductItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Product} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProductItemProvider productItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Product}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProductAdapter() {
+		if (productItemProvider == null) {
+			productItemProvider = new ProductItemProvider(this);
+		}
+
+		return productItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.TargetGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TargetGroupItemProvider targetGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.TargetGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTargetGroupAdapter() {
+		if (targetGroupItemProvider == null) {
+			targetGroupItemProvider = new TargetGroupItemProvider(this);
+		}
+
+		return targetGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Need} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NeedItemProvider needItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Need}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNeedAdapter() {
+		if (needItemProvider == null) {
+			needItemProvider = new NeedItemProvider(this);
+		}
+
+		return needItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.ProductCategory} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProductCategoryItemProvider productCategoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.ProductCategory}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProductCategoryAdapter() {
+		if (productCategoryItemProvider == null) {
+			productCategoryItemProvider = new ProductCategoryItemProvider(this);
+		}
+
+		return productCategoryItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Epic} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EpicItemProvider epicItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Epic}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEpicAdapter() {
+		if (epicItemProvider == null) {
+			epicItemProvider = new EpicItemProvider(this);
+		}
+
+		return epicItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Feature} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FeatureItemProvider featureItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Feature}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFeatureAdapter() {
+		if (featureItemProvider == null) {
+			featureItemProvider = new FeatureItemProvider(this);
+		}
+
+		return featureItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.UserStory} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UserStoryItemProvider userStoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.UserStory}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUserStoryAdapter() {
+		if (userStoryItemProvider == null) {
+			userStoryItemProvider = new UserStoryItemProvider(this);
+		}
+
+		return userStoryItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Task} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TaskItemProvider taskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Task}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTaskAdapter() {
+		if (taskItemProvider == null) {
+			taskItemProvider = new TaskItemProvider(this);
+		}
+
+		return taskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Release} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ReleaseItemProvider releaseItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Release}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createReleaseAdapter() {
+		if (releaseItemProvider == null) {
+			releaseItemProvider = new ReleaseItemProvider(this);
+		}
+
+		return releaseItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Sprint} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SprintItemProvider sprintItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Sprint}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSprintAdapter() {
+		if (sprintItemProvider == null) {
+			sprintItemProvider = new SprintItemProvider(this);
+		}
+
+		return sprintItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Artifact} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArtifactItemProvider artifactItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Artifact}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createArtifactAdapter() {
+		if (artifactItemProvider == null) {
+			artifactItemProvider = new ArtifactItemProvider(this);
+		}
+
+		return artifactItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Theme} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ThemeItemProvider themeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Theme}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createThemeAdapter() {
+		if (themeItemProvider == null) {
+			themeItemProvider = new ThemeItemProvider(this);
+		}
+
+		return themeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.ProductUser} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProductUserItemProvider productUserItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.ProductUser}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProductUserAdapter() {
+		if (productUserItemProvider == null) {
+			productUserItemProvider = new ProductUserItemProvider(this);
+		}
+
+		return productUserItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Interaction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InteractionItemProvider interactionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Interaction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInteractionAdapter() {
+		if (interactionItemProvider == null) {
+			interactionItemProvider = new InteractionItemProvider(this);
+		}
+
+		return interactionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.ScrumTeam} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ScrumTeamItemProvider scrumTeamItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.ScrumTeam}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createScrumTeamAdapter() {
+		if (scrumTeamItemProvider == null) {
+			scrumTeamItemProvider = new ScrumTeamItemProvider(this);
+		}
+
+		return scrumTeamItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.DevelopmentTeam} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DevelopmentTeamItemProvider developmentTeamItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.DevelopmentTeam}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDevelopmentTeamAdapter() {
+		if (developmentTeamItemProvider == null) {
+			developmentTeamItemProvider = new DevelopmentTeamItemProvider(this);
+		}
+
+		return developmentTeamItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Funding} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FundingItemProvider fundingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Funding}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFundingAdapter() {
+		if (fundingItemProvider == null) {
+			fundingItemProvider = new FundingItemProvider(this);
+		}
+
+		return fundingItemProvider;
 	}
 
 	/**
@@ -193,7 +699,29 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 	 * @generated
 	 */
 	public void dispose() {
+		if (noteItemProvider != null) noteItemProvider.dispose();
 		if (scrumRealmItemProvider != null) scrumRealmItemProvider.dispose();
+		if (organizationItemProvider != null) organizationItemProvider.dispose();
+		if (personItemProvider != null) personItemProvider.dispose();
+		if (memberItemProvider != null) memberItemProvider.dispose();
+		if (abstractProductItemProvider != null) abstractProductItemProvider.dispose();
+		if (productItemProvider != null) productItemProvider.dispose();
+		if (targetGroupItemProvider != null) targetGroupItemProvider.dispose();
+		if (needItemProvider != null) needItemProvider.dispose();
+		if (productCategoryItemProvider != null) productCategoryItemProvider.dispose();
+		if (epicItemProvider != null) epicItemProvider.dispose();
+		if (featureItemProvider != null) featureItemProvider.dispose();
+		if (userStoryItemProvider != null) userStoryItemProvider.dispose();
+		if (taskItemProvider != null) taskItemProvider.dispose();
+		if (releaseItemProvider != null) releaseItemProvider.dispose();
+		if (sprintItemProvider != null) sprintItemProvider.dispose();
+		if (artifactItemProvider != null) artifactItemProvider.dispose();
+		if (themeItemProvider != null) themeItemProvider.dispose();
+		if (productUserItemProvider != null) productUserItemProvider.dispose();
+		if (interactionItemProvider != null) interactionItemProvider.dispose();
+		if (scrumTeamItemProvider != null) scrumTeamItemProvider.dispose();
+		if (developmentTeamItemProvider != null) developmentTeamItemProvider.dispose();
+		if (fundingItemProvider != null) fundingItemProvider.dispose();
 	}
 
 }
