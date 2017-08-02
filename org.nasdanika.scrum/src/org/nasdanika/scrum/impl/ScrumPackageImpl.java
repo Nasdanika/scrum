@@ -1099,17 +1099,8 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getInteraction_Description() {
-		return (EAttribute)interactionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getInteraction_Products() {
-		return (EReference)interactionEClass.getEStructuralFeatures().get(2);
+		return (EReference)interactionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1118,7 +1109,7 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * @generated
 	 */
 	public EReference getInteraction_Functionality() {
-		return (EReference)interactionEClass.getEStructuralFeatures().get(3);
+		return (EReference)interactionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1127,6 +1118,15 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * @generated
 	 */
 	public EReference getInteraction_Participant() {
+		return (EReference)interactionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInteraction_Children() {
 		return (EReference)interactionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1414,10 +1414,10 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 
 		interactionEClass = createEClass(INTERACTION);
 		createEAttribute(interactionEClass, INTERACTION__DATE);
-		createEAttribute(interactionEClass, INTERACTION__DESCRIPTION);
 		createEReference(interactionEClass, INTERACTION__PRODUCTS);
 		createEReference(interactionEClass, INTERACTION__FUNCTIONALITY);
 		createEReference(interactionEClass, INTERACTION__PARTICIPANT);
+		createEReference(interactionEClass, INTERACTION__CHILDREN);
 
 		fundingEClass = createEClass(FUNDING);
 		createEAttribute(fundingEClass, FUNDING__DATE);
@@ -1486,6 +1486,7 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 		releaseEClass.getESuperTypes().add(this.getModelElement());
 		sprintEClass.getESuperTypes().add(this.getModelElement());
 		artifactEClass.getESuperTypes().add(this.getModelElement());
+		interactionEClass.getESuperTypes().add(this.getModelElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelElementEClass, ModelElement.class, "ModelElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1617,10 +1618,10 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 
 		initEClass(interactionEClass, Interaction.class, "Interaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInteraction_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInteraction_Description(), ecorePackage.getEString(), "description", null, 1, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInteraction_Products(), this.getProduct(), this.getProduct_Interactions(), "products", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInteraction_Functionality(), this.getFunctionality(), this.getFunctionality_Interactions(), "functionality", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInteraction_Participant(), this.getParty(), this.getParty_Interactions(), "participant", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInteraction_Children(), this.getInteraction(), null, "children", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fundingEClass, Funding.class, "Funding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunding_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Funding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

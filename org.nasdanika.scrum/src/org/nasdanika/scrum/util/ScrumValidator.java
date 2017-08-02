@@ -661,7 +661,17 @@ public class ScrumValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateInteraction(Interaction interaction, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)interaction, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)interaction, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)interaction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)interaction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)interaction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)interaction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)interaction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)interaction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)interaction, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)interaction, diagnostics, context);
+		if (result || diagnostics != null) result &= validateModelElement_validate(interaction, diagnostics, context);
+		return result;
 	}
 
 	/**

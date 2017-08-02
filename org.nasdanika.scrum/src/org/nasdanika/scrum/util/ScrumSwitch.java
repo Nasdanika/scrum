@@ -280,6 +280,7 @@ public class ScrumSwitch<T> extends Switch<T> {
 			case ScrumPackage.INTERACTION: {
 				Interaction interaction = (Interaction)theEObject;
 				T result = caseInteraction(interaction);
+				if (result == null) result = caseModelElement(interaction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

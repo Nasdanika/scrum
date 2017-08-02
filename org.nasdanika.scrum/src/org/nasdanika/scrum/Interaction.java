@@ -3,9 +3,6 @@
 package org.nasdanika.scrum;
 
 import java.util.Date;
-
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -18,18 +15,17 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.scrum.Interaction#getDate <em>Date</em>}</li>
- *   <li>{@link org.nasdanika.scrum.Interaction#getDescription <em>Description</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Interaction#getProducts <em>Products</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Interaction#getFunctionality <em>Functionality</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Interaction#getParticipant <em>Participant</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Interaction#getChildren <em>Children</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.scrum.ScrumPackage#getInteraction()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Interaction extends CDOObject {
+public interface Interaction extends ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -55,32 +51,6 @@ public interface Interaction extends CDOObject {
 	 * @generated
 	 */
 	void setDate(Date value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see org.nasdanika.scrum.ScrumPackage#getInteraction_Description()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.scrum.Interaction#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Products</b></em>' reference list.
@@ -135,5 +105,21 @@ public interface Interaction extends CDOObject {
 	 * @generated
 	 */
 	EList<Party> getParticipant();
+
+	/**
+	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Interaction}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Children</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Children</em>' containment reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getInteraction_Children()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Interaction> getChildren();
 
 } // Interaction

@@ -2989,13 +2989,13 @@ public interface ScrumPackage extends EPackage {
 	int ARTIFACT_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__DATE = 0;
+	int INTERACTION__NAME = MODEL_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3004,7 +3004,25 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__DESCRIPTION = 1;
+	int INTERACTION__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION__NOTES = MODEL_ELEMENT__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION__DATE = MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Products</b></em>' reference list.
@@ -3013,7 +3031,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__PRODUCTS = 2;
+	int INTERACTION__PRODUCTS = MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Functionality</b></em>' reference list.
@@ -3022,7 +3040,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__FUNCTIONALITY = 3;
+	int INTERACTION__FUNCTIONALITY = MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Participant</b></em>' reference list.
@@ -3031,7 +3049,16 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__PARTICIPANT = 4;
+	int INTERACTION__PARTICIPANT = MODEL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION__CHILDREN = MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Interaction</em>' class.
@@ -3040,7 +3067,16 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION_FEATURE_COUNT = 5;
+	int INTERACTION_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Validate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION___VALIDATE__DIAGNOSTICCHAIN_MAP = MODEL_ELEMENT___VALIDATE__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Interaction</em>' class.
@@ -3049,7 +3085,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION_OPERATION_COUNT = 0;
+	int INTERACTION_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.FundingImpl <em>Funding</em>}' class.
@@ -4004,17 +4040,6 @@ public interface ScrumPackage extends EPackage {
 	EAttribute getInteraction_Date();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.scrum.Interaction#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.nasdanika.scrum.Interaction#getDescription()
-	 * @see #getInteraction()
-	 * @generated
-	 */
-	EAttribute getInteraction_Description();
-
-	/**
 	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Interaction#getProducts <em>Products</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4046,6 +4071,17 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInteraction_Participant();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.scrum.Interaction#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see org.nasdanika.scrum.Interaction#getChildren()
+	 * @see #getInteraction()
+	 * @generated
+	 */
+	EReference getInteraction_Children();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.scrum.ScrumTeam <em>Team</em>}'.
@@ -4950,14 +4986,6 @@ public interface ScrumPackage extends EPackage {
 		EAttribute INTERACTION__DATE = eINSTANCE.getInteraction_Date();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INTERACTION__DESCRIPTION = eINSTANCE.getInteraction_Description();
-
-		/**
 		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4980,6 +5008,14 @@ public interface ScrumPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INTERACTION__PARTICIPANT = eINSTANCE.getInteraction_Participant();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERACTION__CHILDREN = eINSTANCE.getInteraction_Children();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.scrum.impl.ScrumTeamImpl <em>Team</em>}' class.

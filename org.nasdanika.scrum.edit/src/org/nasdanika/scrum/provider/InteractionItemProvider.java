@@ -4,25 +4,18 @@ package org.nasdanika.scrum.provider;
 
 
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.nasdanika.scrum.Interaction;
+import org.nasdanika.scrum.ScrumFactory;
 import org.nasdanika.scrum.ScrumPackage;
 
 /**
@@ -32,13 +25,7 @@ import org.nasdanika.scrum.ScrumPackage;
  * @generated
  */
 public class InteractionItemProvider 
-	extends CDOItemProviderAdapterEx
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends ModelElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -61,7 +48,6 @@ public class InteractionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addDatePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
 			addProductsPropertyDescriptor(object);
 			addFunctionalityPropertyDescriptor(object);
 			addParticipantPropertyDescriptor(object);
@@ -83,28 +69,6 @@ public class InteractionItemProvider
 				 getString("_UI_Interaction_date_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Interaction_date_feature", "_UI_Interaction_type"),
 				 ScrumPackage.Literals.INTERACTION__DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Interaction_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Interaction_description_feature", "_UI_Interaction_type"),
-				 ScrumPackage.Literals.INTERACTION__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -180,6 +144,36 @@ public class InteractionItemProvider
 	}
 
 	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(ScrumPackage.Literals.INTERACTION__CHILDREN);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This returns Interaction.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -198,8 +192,7 @@ public class InteractionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Date labelValue = ((Interaction)object).getDate();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Interaction)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Interaction_type") :
 			getString("_UI_Interaction_type") + " " + label;
@@ -219,8 +212,10 @@ public class InteractionItemProvider
 
 		switch (notification.getFeatureID(Interaction.class)) {
 			case ScrumPackage.INTERACTION__DATE:
-			case ScrumPackage.INTERACTION__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case ScrumPackage.INTERACTION__CHILDREN:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -236,17 +231,11 @@ public class InteractionItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return nasdanikascrumEditPlugin.INSTANCE;
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.INTERACTION__CHILDREN,
+				 ScrumFactory.eINSTANCE.createInteraction()));
 	}
 
 }
