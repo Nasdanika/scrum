@@ -15,10 +15,11 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.nasdanika.scrum.Product#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getThemes <em>Themes</em>}</li>
- *   <li>{@link org.nasdanika.scrum.Product#getReleases <em>Releases</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getProductUsers <em>Product Users</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getCustomers <em>Customers</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getTargetGroups <em>Target Groups</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Product#getComponents <em>Components</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Product#getInteractions <em>Interactions</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.scrum.ScrumPackage#getProduct()
@@ -59,22 +60,6 @@ public interface Product extends AbstractProduct {
 	EList<Theme> getThemes();
 
 	/**
-	 * Returns the value of the '<em><b>Releases</b></em>' containment reference list.
-	 * The list contents are of type {@link org.nasdanika.scrum.Release}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Releases</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Releases</em>' containment reference list.
-	 * @see org.nasdanika.scrum.ScrumPackage#getProduct_Releases()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Release> getReleases();
-
-	/**
 	 * Returns the value of the '<em><b>Product Users</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.ProductUser}.
 	 * <!-- begin-user-doc -->
@@ -93,6 +78,7 @@ public interface Product extends AbstractProduct {
 	/**
 	 * Returns the value of the '<em><b>Customers</b></em>' reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.Party}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Party#getUsesProducts <em>Uses Products</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Customers</em>' reference list isn't clear,
@@ -101,7 +87,8 @@ public interface Product extends AbstractProduct {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Customers</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getProduct_Customers()
-	 * @model
+	 * @see org.nasdanika.scrum.Party#getUsesProducts
+	 * @model opposite="usesProducts"
 	 * @generated
 	 */
 	EList<Party> getCustomers();
@@ -121,5 +108,39 @@ public interface Product extends AbstractProduct {
 	 * @generated
 	 */
 	EList<TargetGroup> getTargetGroups();
+
+	/**
+	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Component}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Components</em>' containment reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getProduct_Components()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Component> getComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Interactions</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Interaction}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Interaction#getProducts <em>Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Interactions</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interactions</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getProduct_Interactions()
+	 * @see org.nasdanika.scrum.Interaction#getProducts
+	 * @model opposite="products"
+	 * @generated
+	 */
+	EList<Interaction> getInteractions();
 
 } // Product

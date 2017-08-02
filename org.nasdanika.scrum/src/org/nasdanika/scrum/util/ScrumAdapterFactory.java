@@ -87,8 +87,16 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 				return createPartyAdapter();
 			}
 			@Override
+			public Adapter casePartyCategory(PartyCategory object) {
+				return createPartyCategoryAdapter();
+			}
+			@Override
 			public Adapter caseOrganization(Organization object) {
 				return createOrganizationAdapter();
+			}
+			@Override
+			public Adapter caseProject(Project object) {
+				return createProjectAdapter();
 			}
 			@Override
 			public Adapter casePerson(Person object) {
@@ -99,12 +107,28 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 				return createMemberAdapter();
 			}
 			@Override
+			public Adapter casePartyReference(PartyReference object) {
+				return createPartyReferenceAdapter();
+			}
+			@Override
+			public Adapter caseScrumTeam(ScrumTeam object) {
+				return createScrumTeamAdapter();
+			}
+			@Override
+			public Adapter caseDevelopmentTeam(DevelopmentTeam object) {
+				return createDevelopmentTeamAdapter();
+			}
+			@Override
 			public Adapter caseAbstractProduct(AbstractProduct object) {
 				return createAbstractProductAdapter();
 			}
 			@Override
 			public Adapter caseProduct(Product object) {
 				return createProductAdapter();
+			}
+			@Override
+			public Adapter caseComponent(Component object) {
+				return createComponentAdapter();
 			}
 			@Override
 			public Adapter caseTargetGroup(TargetGroup object) {
@@ -117,6 +141,14 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseProductCategory(ProductCategory object) {
 				return createProductCategoryAdapter();
+			}
+			@Override
+			public Adapter caseTheme(Theme object) {
+				return createThemeAdapter();
+			}
+			@Override
+			public Adapter caseProductUser(ProductUser object) {
+				return createProductUserAdapter();
 			}
 			@Override
 			public Adapter caseFunctionality(Functionality object) {
@@ -151,24 +183,8 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 				return createArtifactAdapter();
 			}
 			@Override
-			public Adapter caseTheme(Theme object) {
-				return createThemeAdapter();
-			}
-			@Override
-			public Adapter caseProductUser(ProductUser object) {
-				return createProductUserAdapter();
-			}
-			@Override
 			public Adapter caseInteraction(Interaction object) {
 				return createInteractionAdapter();
-			}
-			@Override
-			public Adapter caseScrumTeam(ScrumTeam object) {
-				return createScrumTeamAdapter();
-			}
-			@Override
-			public Adapter caseDevelopmentTeam(DevelopmentTeam object) {
-				return createDevelopmentTeamAdapter();
 			}
 			@Override
 			public Adapter caseFunding(Funding object) {
@@ -259,6 +275,20 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.PartyCategory <em>Party Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.PartyCategory
+	 * @generated
+	 */
+	public Adapter createPartyCategoryAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Organization <em>Organization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -269,6 +299,20 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOrganizationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Project <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Project
+	 * @generated
+	 */
+	public Adapter createProjectAdapter() {
 		return null;
 	}
 
@@ -301,6 +345,20 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.PartyReference <em>Party Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.PartyReference
+	 * @generated
+	 */
+	public Adapter createPartyReferenceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.AbstractProduct <em>Abstract Product</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -325,6 +383,20 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProductAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Component <em>Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Component
+	 * @generated
+	 */
+	public Adapter createComponentAdapter() {
 		return null;
 	}
 

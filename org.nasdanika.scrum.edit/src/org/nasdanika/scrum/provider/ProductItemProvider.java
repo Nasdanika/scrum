@@ -48,6 +48,7 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addCustomersPropertyDescriptor(object);
+			addInteractionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -75,6 +76,28 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Interactions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInteractionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Product_interactions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Product_interactions_feature", "_UI_Product_type"),
+				 ScrumPackage.Literals.PRODUCT__INTERACTIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -88,9 +111,9 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__CAPABILITIES);
 			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__THEMES);
-			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__RELEASES);
 			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__PRODUCT_USERS);
 			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__TARGET_GROUPS);
+			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__COMPONENTS);
 		}
 		return childrenFeatures;
 	}
@@ -148,9 +171,9 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 		switch (notification.getFeatureID(Product.class)) {
 			case ScrumPackage.PRODUCT__CAPABILITIES:
 			case ScrumPackage.PRODUCT__THEMES:
-			case ScrumPackage.PRODUCT__RELEASES:
 			case ScrumPackage.PRODUCT__PRODUCT_USERS:
 			case ScrumPackage.PRODUCT__TARGET_GROUPS:
+			case ScrumPackage.PRODUCT__COMPONENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -180,11 +203,6 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ScrumPackage.Literals.PRODUCT__RELEASES,
-				 ScrumFactory.eINSTANCE.createRelease()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(ScrumPackage.Literals.PRODUCT__PRODUCT_USERS,
 				 ScrumFactory.eINSTANCE.createProductUser()));
 
@@ -192,6 +210,11 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 			(createChildParameter
 				(ScrumPackage.Literals.PRODUCT__TARGET_GROUPS,
 				 ScrumFactory.eINSTANCE.createTargetGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.PRODUCT__COMPONENTS,
+				 ScrumFactory.eINSTANCE.createComponent()));
 	}
 
 }

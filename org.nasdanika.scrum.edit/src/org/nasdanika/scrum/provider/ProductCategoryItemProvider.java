@@ -139,11 +139,6 @@ public class ProductCategoryItemProvider extends AbstractProductItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ScrumPackage.Literals.PRODUCT_CATEGORY__PRODUCTS,
-				 ScrumFactory.eINSTANCE.createAbstractProduct()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ScrumPackage.Literals.PRODUCT_CATEGORY__PRODUCTS,
 				 ScrumFactory.eINSTANCE.createProduct()));
 
 		newChildDescriptors.add

@@ -62,7 +62,7 @@ public class FeatureItemProvider extends FunctionalityItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ScrumPackage.Literals.FEATURE__USERSTORIES);
+			childrenFeatures.add(ScrumPackage.Literals.FEATURE__USER_STORIES);
 		}
 		return childrenFeatures;
 	}
@@ -118,7 +118,7 @@ public class FeatureItemProvider extends FunctionalityItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Feature.class)) {
-			case ScrumPackage.FEATURE__USERSTORIES:
+			case ScrumPackage.FEATURE__USER_STORIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -138,7 +138,7 @@ public class FeatureItemProvider extends FunctionalityItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ScrumPackage.Literals.FEATURE__USERSTORIES,
+				(ScrumPackage.Literals.FEATURE__USER_STORIES,
 				 ScrumFactory.eINSTANCE.createUserStory()));
 	}
 

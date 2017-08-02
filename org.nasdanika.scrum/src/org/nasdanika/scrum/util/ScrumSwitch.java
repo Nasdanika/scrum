@@ -97,11 +97,27 @@ public class ScrumSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ScrumPackage.PARTY_CATEGORY: {
+				PartyCategory partyCategory = (PartyCategory)theEObject;
+				T result = casePartyCategory(partyCategory);
+				if (result == null) result = caseParty(partyCategory);
+				if (result == null) result = caseModelElement(partyCategory);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ScrumPackage.ORGANIZATION: {
 				Organization organization = (Organization)theEObject;
 				T result = caseOrganization(organization);
 				if (result == null) result = caseParty(organization);
 				if (result == null) result = caseModelElement(organization);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ScrumPackage.PROJECT: {
+				Project project = (Project)theEObject;
+				T result = caseProject(project);
+				if (result == null) result = caseParty(project);
+				if (result == null) result = caseModelElement(project);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -120,6 +136,30 @@ public class ScrumSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ScrumPackage.PARTY_REFERENCE: {
+				PartyReference partyReference = (PartyReference)theEObject;
+				T result = casePartyReference(partyReference);
+				if (result == null) result = caseParty(partyReference);
+				if (result == null) result = caseModelElement(partyReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ScrumPackage.SCRUM_TEAM: {
+				ScrumTeam scrumTeam = (ScrumTeam)theEObject;
+				T result = caseScrumTeam(scrumTeam);
+				if (result == null) result = caseOrganization(scrumTeam);
+				if (result == null) result = caseParty(scrumTeam);
+				if (result == null) result = caseModelElement(scrumTeam);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ScrumPackage.DEVELOPMENT_TEAM: {
+				DevelopmentTeam developmentTeam = (DevelopmentTeam)theEObject;
+				T result = caseDevelopmentTeam(developmentTeam);
+				if (result == null) result = caseModelElement(developmentTeam);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ScrumPackage.ABSTRACT_PRODUCT: {
 				AbstractProduct abstractProduct = (AbstractProduct)theEObject;
 				T result = caseAbstractProduct(abstractProduct);
@@ -132,6 +172,13 @@ public class ScrumSwitch<T> extends Switch<T> {
 				T result = caseProduct(product);
 				if (result == null) result = caseAbstractProduct(product);
 				if (result == null) result = caseModelElement(product);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ScrumPackage.COMPONENT: {
+				Component component = (Component)theEObject;
+				T result = caseComponent(component);
+				if (result == null) result = caseModelElement(component);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -154,6 +201,20 @@ public class ScrumSwitch<T> extends Switch<T> {
 				T result = caseProductCategory(productCategory);
 				if (result == null) result = caseAbstractProduct(productCategory);
 				if (result == null) result = caseModelElement(productCategory);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ScrumPackage.THEME: {
+				Theme theme = (Theme)theEObject;
+				T result = caseTheme(theme);
+				if (result == null) result = caseModelElement(theme);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ScrumPackage.PRODUCT_USER: {
+				ProductUser productUser = (ProductUser)theEObject;
+				T result = caseProductUser(productUser);
+				if (result == null) result = caseModelElement(productUser);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -216,39 +277,9 @@ public class ScrumSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ScrumPackage.THEME: {
-				Theme theme = (Theme)theEObject;
-				T result = caseTheme(theme);
-				if (result == null) result = caseModelElement(theme);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ScrumPackage.PRODUCT_USER: {
-				ProductUser productUser = (ProductUser)theEObject;
-				T result = caseProductUser(productUser);
-				if (result == null) result = caseModelElement(productUser);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ScrumPackage.INTERACTION: {
 				Interaction interaction = (Interaction)theEObject;
 				T result = caseInteraction(interaction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ScrumPackage.SCRUM_TEAM: {
-				ScrumTeam scrumTeam = (ScrumTeam)theEObject;
-				T result = caseScrumTeam(scrumTeam);
-				if (result == null) result = caseOrganization(scrumTeam);
-				if (result == null) result = caseParty(scrumTeam);
-				if (result == null) result = caseModelElement(scrumTeam);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ScrumPackage.DEVELOPMENT_TEAM: {
-				DevelopmentTeam developmentTeam = (DevelopmentTeam)theEObject;
-				T result = caseDevelopmentTeam(developmentTeam);
-				if (result == null) result = caseModelElement(developmentTeam);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -323,6 +354,21 @@ public class ScrumSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Party Category</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Party Category</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePartyCategory(PartyCategory object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Organization</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -334,6 +380,21 @@ public class ScrumSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOrganization(Organization object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Project</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Project</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProject(Project object) {
 		return null;
 	}
 
@@ -368,6 +429,21 @@ public class ScrumSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Party Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Party Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePartyReference(PartyReference object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Product</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -394,6 +470,21 @@ public class ScrumSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProduct(Product object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponent(Component object) {
 		return null;
 	}
 

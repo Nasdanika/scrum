@@ -17,7 +17,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.nasdanika.scrum.ScrumTeam#getProductOwner <em>Product Owner</em>}</li>
  *   <li>{@link org.nasdanika.scrum.ScrumTeam#getScrumMaster <em>Scrum Master</em>}</li>
  *   <li>{@link org.nasdanika.scrum.ScrumTeam#getProducts <em>Products</em>}</li>
- *   <li>{@link org.nasdanika.scrum.ScrumTeam#getInteractions <em>Interactions</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.ScrumTeam#getTeamInteractions <em>Team Interactions</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.ScrumTeam#getReleases <em>Releases</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.scrum.ScrumPackage#getScrumTeam()
@@ -110,19 +111,35 @@ public interface ScrumTeam extends Organization {
 	EList<AbstractProduct> getProducts();
 
 	/**
-	 * Returns the value of the '<em><b>Interactions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Team Interactions</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.Interaction}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Interactions</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Team Interactions</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Interactions</em>' containment reference list.
-	 * @see org.nasdanika.scrum.ScrumPackage#getScrumTeam_Interactions()
+	 * @return the value of the '<em>Team Interactions</em>' containment reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getScrumTeam_TeamInteractions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Interaction> getInteractions();
+	EList<Interaction> getTeamInteractions();
+
+	/**
+	 * Returns the value of the '<em><b>Releases</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Release}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Releases</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Releases</em>' containment reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getScrumTeam_Releases()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Release> getReleases();
 
 } // ScrumTeam

@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -46,8 +47,31 @@ public class MemberItemProvider extends ModelElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addAssignmentsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Assignments feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAssignmentsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Member_assignments_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Member_assignments_feature", "_UI_Member_type"),
+				 ScrumPackage.Literals.MEMBER__ASSIGNMENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -139,12 +163,27 @@ public class MemberItemProvider extends ModelElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ScrumPackage.Literals.MEMBER__PARTIES,
+				 ScrumFactory.eINSTANCE.createPartyCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.MEMBER__PARTIES,
 				 ScrumFactory.eINSTANCE.createOrganization()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ScrumPackage.Literals.MEMBER__PARTIES,
+				 ScrumFactory.eINSTANCE.createProject()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.MEMBER__PARTIES,
 				 ScrumFactory.eINSTANCE.createPerson()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.MEMBER__PARTIES,
+				 ScrumFactory.eINSTANCE.createPartyReference()));
 
 		newChildDescriptors.add
 			(createChildParameter

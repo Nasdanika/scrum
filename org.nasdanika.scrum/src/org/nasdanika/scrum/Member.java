@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.scrum.Member#getParties <em>Parties</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Member#getAssignments <em>Assignments</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.scrum.ScrumPackage#getMember()
@@ -36,5 +37,23 @@ public interface Member extends ModelElement {
 	 * @generated
 	 */
 	EList<Party> getParties();
+
+	/**
+	 * Returns the value of the '<em><b>Assignments</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Functionality}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Functionality#getAssignedTo <em>Assigned To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Assignments</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Assignments</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getMember_Assignments()
+	 * @see org.nasdanika.scrum.Functionality#getAssignedTo
+	 * @model opposite="assignedTo"
+	 * @generated
+	 */
+	EList<Functionality> getAssignments();
 
 } // Member

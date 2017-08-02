@@ -21,7 +21,7 @@ import org.nasdanika.scrum.ScrumPackage;
  *
  * @generated
  */
-public class AbstractProductImpl extends ModelElementImpl implements AbstractProduct {
+public abstract class AbstractProductImpl extends ModelElementImpl implements AbstractProduct {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -51,6 +51,10 @@ public class FunctionalityItemProvider extends ModelElementItemProvider {
 			addThemesPropertyDescriptor(object);
 			addCustomersPropertyDescriptor(object);
 			addSatisfiesPropertyDescriptor(object);
+			addDependenciesPropertyDescriptor(object);
+			addDependantsPropertyDescriptor(object);
+			addInteractionsPropertyDescriptor(object);
+			addAssignedToPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -135,6 +139,94 @@ public class FunctionalityItemProvider extends ModelElementItemProvider {
 				 getString("_UI_Functionality_satisfies_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Functionality_satisfies_feature", "_UI_Functionality_type"),
 				 ScrumPackage.Literals.FUNCTIONALITY__SATISFIES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Dependencies feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDependenciesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Functionality_dependencies_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Functionality_dependencies_feature", "_UI_Functionality_type"),
+				 ScrumPackage.Literals.FUNCTIONALITY__DEPENDENCIES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Dependants feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDependantsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Functionality_dependants_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Functionality_dependants_feature", "_UI_Functionality_type"),
+				 ScrumPackage.Literals.FUNCTIONALITY__DEPENDANTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Interactions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInteractionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Functionality_interactions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Functionality_interactions_feature", "_UI_Functionality_type"),
+				 ScrumPackage.Literals.FUNCTIONALITY__INTERACTIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Assigned To feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAssignedToPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Functionality_assignedTo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Functionality_assignedTo_feature", "_UI_Functionality_type"),
+				 ScrumPackage.Literals.FUNCTIONALITY__ASSIGNED_TO,
 				 true,
 				 false,
 				 true,

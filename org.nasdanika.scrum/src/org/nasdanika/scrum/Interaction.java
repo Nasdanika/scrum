@@ -85,6 +85,7 @@ public interface Interaction extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Products</b></em>' reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.Product}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Product#getInteractions <em>Interactions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Products</em>' reference list isn't clear,
@@ -93,7 +94,8 @@ public interface Interaction extends CDOObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Products</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getInteraction_Products()
-	 * @model
+	 * @see org.nasdanika.scrum.Product#getInteractions
+	 * @model opposite="interactions"
 	 * @generated
 	 */
 	EList<Product> getProducts();
@@ -101,6 +103,7 @@ public interface Interaction extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Functionality</b></em>' reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.Functionality}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Functionality#getInteractions <em>Interactions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Functionality</em>' reference list isn't clear,
@@ -109,7 +112,8 @@ public interface Interaction extends CDOObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Functionality</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getInteraction_Functionality()
-	 * @model
+	 * @see org.nasdanika.scrum.Functionality#getInteractions
+	 * @model opposite="interactions"
 	 * @generated
 	 */
 	EList<Functionality> getFunctionality();
@@ -117,6 +121,7 @@ public interface Interaction extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Participant</b></em>' reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.Party}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Party#getInteractions <em>Interactions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Participant</em>' reference list isn't clear,
@@ -125,7 +130,8 @@ public interface Interaction extends CDOObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Participant</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getInteraction_Participant()
-	 * @model
+	 * @see org.nasdanika.scrum.Party#getInteractions
+	 * @model opposite="interactions"
 	 * @generated
 	 */
 	EList<Party> getParticipant();

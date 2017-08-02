@@ -2,13 +2,13 @@
  */
 package org.nasdanika.scrum.impl;
 
+import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.nasdanika.scrum.Feature;
 import org.nasdanika.scrum.ScrumPackage;
 import org.nasdanika.scrum.Sprint;
+import org.nasdanika.scrum.UserStory;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +18,9 @@ import org.nasdanika.scrum.Sprint;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.scrum.impl.SprintImpl#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.SprintImpl#getStart <em>Start</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.SprintImpl#getEnd <em>End</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.SprintImpl#getStories <em>Stories</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,9 +50,45 @@ public class SprintImpl extends ModelElementImpl implements Sprint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Date getStart() {
+		return (Date)eGet(ScrumPackage.Literals.SPRINT__START, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStart(Date newStart) {
+		eSet(ScrumPackage.Literals.SPRINT__START, newStart);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getEnd() {
+		return (Date)eGet(ScrumPackage.Literals.SPRINT__END, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEnd(Date newEnd) {
+		eSet(ScrumPackage.Literals.SPRINT__END, newEnd);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
-	public EList<Feature> getFeatures() {
-		return (EList<Feature>)eGet(ScrumPackage.Literals.SPRINT__FEATURES, true);
+	public EList<UserStory> getStories() {
+		return (EList<UserStory>)eGet(ScrumPackage.Literals.SPRINT__STORIES, true);
 	}
 
 } //SprintImpl

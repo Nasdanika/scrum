@@ -54,7 +54,6 @@ public class ScrumRealmItemProvider extends LoginPasswordRealmItemProvider {
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addNotesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -104,28 +103,6 @@ public class ScrumRealmItemProvider extends LoginPasswordRealmItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Notes feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNotesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ModelElement_notes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_notes_feature", "_UI_ModelElement_type"),
-				 ScrumPackage.Literals.MODEL_ELEMENT__NOTES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -137,6 +114,7 @@ public class ScrumRealmItemProvider extends LoginPasswordRealmItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(ScrumPackage.Literals.MODEL_ELEMENT__NOTES);
 			childrenFeatures.add(ScrumPackage.Literals.SCRUM_REALM__PARTIES);
 		}
 		return childrenFeatures;
@@ -197,6 +175,7 @@ public class ScrumRealmItemProvider extends LoginPasswordRealmItemProvider {
 			case ScrumPackage.SCRUM_REALM__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case ScrumPackage.SCRUM_REALM__NOTES:
 			case ScrumPackage.SCRUM_REALM__PARTIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -217,13 +196,33 @@ public class ScrumRealmItemProvider extends LoginPasswordRealmItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(ScrumPackage.Literals.MODEL_ELEMENT__NOTES,
+				 ScrumFactory.eINSTANCE.createNote()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.SCRUM_REALM__PARTIES,
+				 ScrumFactory.eINSTANCE.createPartyCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(ScrumPackage.Literals.SCRUM_REALM__PARTIES,
 				 ScrumFactory.eINSTANCE.createOrganization()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ScrumPackage.Literals.SCRUM_REALM__PARTIES,
+				 ScrumFactory.eINSTANCE.createProject()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.SCRUM_REALM__PARTIES,
 				 ScrumFactory.eINSTANCE.createPerson()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.SCRUM_REALM__PARTIES,
+				 ScrumFactory.eINSTANCE.createPartyReference()));
 
 		newChildDescriptors.add
 			(createChildParameter

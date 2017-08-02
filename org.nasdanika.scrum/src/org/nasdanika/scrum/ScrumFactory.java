@@ -40,6 +40,15 @@ public interface ScrumFactory extends EFactory {
 	ScrumRealm createScrumRealm();
 
 	/**
+	 * Returns a new object of class '<em>Party Category</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Party Category</em>'.
+	 * @generated
+	 */
+	PartyCategory createPartyCategory();
+
+	/**
 	 * Returns a new object of class '<em>Organization</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,6 +56,15 @@ public interface ScrumFactory extends EFactory {
 	 * @generated
 	 */
 	Organization createOrganization();
+
+	/**
+	 * Returns a new object of class '<em>Project</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Project</em>'.
+	 * @generated
+	 */
+	Project createProject();
 
 	/**
 	 * Returns a new object of class '<em>Person</em>'.
@@ -67,13 +85,13 @@ public interface ScrumFactory extends EFactory {
 	Member createMember();
 
 	/**
-	 * Returns a new object of class '<em>Abstract Product</em>'.
+	 * Returns a new object of class '<em>Party Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abstract Product</em>'.
+	 * @return a new object of class '<em>Party Reference</em>'.
 	 * @generated
 	 */
-	AbstractProduct createAbstractProduct();
+	PartyReference createPartyReference();
 
 	/**
 	 * Returns a new object of class '<em>Product</em>'.
@@ -83,6 +101,15 @@ public interface ScrumFactory extends EFactory {
 	 * @generated
 	 */
 	Product createProduct();
+
+	/**
+	 * Returns a new object of class '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component</em>'.
+	 * @generated
+	 */
+	Component createComponent();
 
 	/**
 	 * Returns a new object of class '<em>Target Group</em>'.

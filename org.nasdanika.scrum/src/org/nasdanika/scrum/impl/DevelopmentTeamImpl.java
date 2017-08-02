@@ -5,6 +5,7 @@ package org.nasdanika.scrum.impl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.nasdanika.scrum.AbstractProduct;
 import org.nasdanika.scrum.DevelopmentTeam;
 import org.nasdanika.scrum.Member;
 import org.nasdanika.scrum.ScrumPackage;
@@ -18,6 +19,7 @@ import org.nasdanika.scrum.ScrumPackage;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.scrum.impl.DevelopmentTeamImpl#getMembers <em>Members</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.DevelopmentTeamImpl#getProducts <em>Products</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +52,16 @@ public class DevelopmentTeamImpl extends ModelElementImpl implements Development
 	@SuppressWarnings("unchecked")
 	public EList<Member> getMembers() {
 		return (EList<Member>)eGet(ScrumPackage.Literals.DEVELOPMENT_TEAM__MEMBERS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<AbstractProduct> getProducts() {
+		return (EList<AbstractProduct>)eGet(ScrumPackage.Literals.DEVELOPMENT_TEAM__PRODUCTS, true);
 	}
 
 } //DevelopmentTeamImpl

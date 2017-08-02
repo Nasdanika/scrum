@@ -12,6 +12,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.nasdanika.scrum.ScrumPackage;
 import org.nasdanika.scrum.Sprint;
 
@@ -43,25 +45,71 @@ public class SprintItemProvider extends ModelElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addFeaturesPropertyDescriptor(object);
+			addStartPropertyDescriptor(object);
+			addEndPropertyDescriptor(object);
+			addStoriesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Features feature.
+	 * This adds a property descriptor for the Start feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFeaturesPropertyDescriptor(Object object) {
+	protected void addStartPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Sprint_features_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Sprint_features_feature", "_UI_Sprint_type"),
-				 ScrumPackage.Literals.SPRINT__FEATURES,
+				 getString("_UI_Sprint_start_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Sprint_start_feature", "_UI_Sprint_type"),
+				 ScrumPackage.Literals.SPRINT__START,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the End feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEndPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Sprint_end_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Sprint_end_feature", "_UI_Sprint_type"),
+				 ScrumPackage.Literals.SPRINT__END,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Stories feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStoriesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Sprint_stories_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Sprint_stories_feature", "_UI_Sprint_type"),
+				 ScrumPackage.Literals.SPRINT__STORIES,
 				 true,
 				 false,
 				 true,
@@ -106,6 +154,13 @@ public class SprintItemProvider extends ModelElementItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Sprint.class)) {
+			case ScrumPackage.SPRINT__START:
+			case ScrumPackage.SPRINT__END:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

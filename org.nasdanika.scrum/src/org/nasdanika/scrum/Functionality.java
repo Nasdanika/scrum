@@ -18,6 +18,10 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.nasdanika.scrum.Functionality#getCustomers <em>Customers</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Functionality#getFundings <em>Fundings</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Functionality#getSatisfies <em>Satisfies</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Functionality#getDependencies <em>Dependencies</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Functionality#getDependants <em>Dependants</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Functionality#getInteractions <em>Interactions</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Functionality#getAssignedTo <em>Assigned To</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.scrum.ScrumPackage#getFunctionality()
@@ -28,6 +32,7 @@ public interface Functionality extends ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Users</b></em>' reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.ProductUser}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.ProductUser#getFunctionality <em>Functionality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Users</em>' reference list isn't clear,
@@ -36,7 +41,8 @@ public interface Functionality extends ModelElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Users</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getFunctionality_Users()
-	 * @model
+	 * @see org.nasdanika.scrum.ProductUser#getFunctionality
+	 * @model opposite="functionality"
 	 * @generated
 	 */
 	EList<ProductUser> getUsers();
@@ -44,6 +50,7 @@ public interface Functionality extends ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Themes</b></em>' reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.Theme}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Theme#getFunctionality <em>Functionality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Themes</em>' reference list isn't clear,
@@ -52,7 +59,8 @@ public interface Functionality extends ModelElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Themes</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getFunctionality_Themes()
-	 * @model
+	 * @see org.nasdanika.scrum.Theme#getFunctionality
+	 * @model opposite="functionality"
 	 * @generated
 	 */
 	EList<Theme> getThemes();
@@ -60,6 +68,7 @@ public interface Functionality extends ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Customers</b></em>' reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.Party}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Party#getUsesFunctionality <em>Uses Functionality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Customers</em>' reference list isn't clear,
@@ -68,7 +77,8 @@ public interface Functionality extends ModelElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Customers</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getFunctionality_Customers()
-	 * @model
+	 * @see org.nasdanika.scrum.Party#getUsesFunctionality
+	 * @model opposite="usesFunctionality"
 	 * @generated
 	 */
 	EList<Party> getCustomers();
@@ -106,5 +116,77 @@ public interface Functionality extends ModelElement {
 	 * @generated
 	 */
 	EList<Need> getSatisfies();
+
+	/**
+	 * Returns the value of the '<em><b>Dependencies</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Functionality}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Functionality#getDependants <em>Dependants</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Dependencies</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dependencies</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getFunctionality_Dependencies()
+	 * @see org.nasdanika.scrum.Functionality#getDependants
+	 * @model opposite="dependants"
+	 * @generated
+	 */
+	EList<Functionality> getDependencies();
+
+	/**
+	 * Returns the value of the '<em><b>Dependants</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Functionality}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Functionality#getDependencies <em>Dependencies</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Dependants</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dependants</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getFunctionality_Dependants()
+	 * @see org.nasdanika.scrum.Functionality#getDependencies
+	 * @model opposite="dependencies"
+	 * @generated
+	 */
+	EList<Functionality> getDependants();
+
+	/**
+	 * Returns the value of the '<em><b>Interactions</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Interaction}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Interaction#getFunctionality <em>Functionality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Interactions</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interactions</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getFunctionality_Interactions()
+	 * @see org.nasdanika.scrum.Interaction#getFunctionality
+	 * @model opposite="functionality"
+	 * @generated
+	 */
+	EList<Interaction> getInteractions();
+
+	/**
+	 * Returns the value of the '<em><b>Assigned To</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Member}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Member#getAssignments <em>Assignments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Assigned To</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Assigned To</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getFunctionality_AssignedTo()
+	 * @see org.nasdanika.scrum.Member#getAssignments
+	 * @model opposite="assignments"
+	 * @generated
+	 */
+	EList<Member> getAssignedTo();
 
 } // Functionality

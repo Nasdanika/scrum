@@ -9,9 +9,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import org.nasdanika.scrum.Party;
+import org.nasdanika.scrum.ScrumPackage;
 
 /**
  * This is the item provider adapter for a {@link org.nasdanika.scrum.Party} object.
@@ -41,8 +43,123 @@ public class PartyItemProvider extends ModelElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addReferencesPropertyDescriptor(object);
+			addUsesProductsPropertyDescriptor(object);
+			addUsesFunctionalityPropertyDescriptor(object);
+			addInteractionsPropertyDescriptor(object);
+			addFundingsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the References feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReferencesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Party_references_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Party_references_feature", "_UI_Party_type"),
+				 ScrumPackage.Literals.PARTY__REFERENCES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Uses Products feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUsesProductsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Party_usesProducts_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Party_usesProducts_feature", "_UI_Party_type"),
+				 ScrumPackage.Literals.PARTY__USES_PRODUCTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Uses Functionality feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUsesFunctionalityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Party_usesFunctionality_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Party_usesFunctionality_feature", "_UI_Party_type"),
+				 ScrumPackage.Literals.PARTY__USES_FUNCTIONALITY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Interactions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInteractionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Party_interactions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Party_interactions_feature", "_UI_Party_type"),
+				 ScrumPackage.Literals.PARTY__INTERACTIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Fundings feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFundingsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Party_fundings_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Party_fundings_feature", "_UI_Party_type"),
+				 ScrumPackage.Literals.PARTY__FUNDINGS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

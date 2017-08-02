@@ -6,11 +6,12 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.nasdanika.scrum.Component;
 import org.nasdanika.scrum.Epic;
+import org.nasdanika.scrum.Interaction;
 import org.nasdanika.scrum.Party;
 import org.nasdanika.scrum.Product;
 import org.nasdanika.scrum.ProductUser;
-import org.nasdanika.scrum.Release;
 import org.nasdanika.scrum.ScrumPackage;
 import org.nasdanika.scrum.TargetGroup;
 import org.nasdanika.scrum.Theme;
@@ -25,10 +26,11 @@ import org.nasdanika.scrum.Theme;
  * <ul>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getThemes <em>Themes</em>}</li>
- *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getReleases <em>Releases</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getProductUsers <em>Product Users</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getCustomers <em>Customers</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getTargetGroups <em>Target Groups</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getComponents <em>Components</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getInteractions <em>Interactions</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,16 +81,6 @@ public class ProductImpl extends AbstractProductImpl implements Product {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Release> getReleases() {
-		return (EList<Release>)eGet(ScrumPackage.Literals.PRODUCT__RELEASES, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
 	public EList<ProductUser> getProductUsers() {
 		return (EList<ProductUser>)eGet(ScrumPackage.Literals.PRODUCT__PRODUCT_USERS, true);
 	}
@@ -111,6 +103,26 @@ public class ProductImpl extends AbstractProductImpl implements Product {
 	@SuppressWarnings("unchecked")
 	public EList<TargetGroup> getTargetGroups() {
 		return (EList<TargetGroup>)eGet(ScrumPackage.Literals.PRODUCT__TARGET_GROUPS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Component> getComponents() {
+		return (EList<Component>)eGet(ScrumPackage.Literals.PRODUCT__COMPONENTS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Interaction> getInteractions() {
+		return (EList<Interaction>)eGet(ScrumPackage.Literals.PRODUCT__INTERACTIONS, true);
 	}
 
 } //ProductImpl

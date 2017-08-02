@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.scrum.Feature#getUserstories <em>Userstories</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Feature#getUserStories <em>User Stories</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Feature#getPlannedFor <em>Planned For</em>}</li>
  * </ul>
  *
@@ -23,25 +23,25 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Feature extends Functionality {
 	/**
-	 * Returns the value of the '<em><b>Userstories</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>User Stories</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.UserStory}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Userstories</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>User Stories</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Userstories</em>' containment reference list.
-	 * @see org.nasdanika.scrum.ScrumPackage#getFeature_Userstories()
+	 * @return the value of the '<em>User Stories</em>' containment reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getFeature_UserStories()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<UserStory> getUserstories();
+	EList<UserStory> getUserStories();
 
 	/**
 	 * Returns the value of the '<em><b>Planned For</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.scrum.Sprint}.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Sprint#getFeatures <em>Features</em>}'.
+	 * The list contents are of type {@link org.nasdanika.scrum.Release}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Release#getFeatures <em>Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Planned For</em>' reference list isn't clear,
@@ -50,10 +50,10 @@ public interface Feature extends Functionality {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Planned For</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getFeature_PlannedFor()
-	 * @see org.nasdanika.scrum.Sprint#getFeatures
+	 * @see org.nasdanika.scrum.Release#getFeatures
 	 * @model opposite="features"
 	 * @generated
 	 */
-	EList<Sprint> getPlannedFor();
+	EList<Release> getPlannedFor();
 
 } // Feature

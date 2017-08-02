@@ -118,6 +118,29 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.PartyCategory} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PartyCategoryItemProvider partyCategoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.PartyCategory}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPartyCategoryAdapter() {
+		if (partyCategoryItemProvider == null) {
+			partyCategoryItemProvider = new PartyCategoryItemProvider(this);
+		}
+
+		return partyCategoryItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Organization} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,6 +161,29 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 		}
 
 		return organizationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Project} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProjectItemProvider projectItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Project}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProjectAdapter() {
+		if (projectItemProvider == null) {
+			projectItemProvider = new ProjectItemProvider(this);
+		}
+
+		return projectItemProvider;
 	}
 
 	/**
@@ -187,26 +233,26 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.AbstractProduct} instances.
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.PartyReference} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AbstractProductItemProvider abstractProductItemProvider;
+	protected PartyReferenceItemProvider partyReferenceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.nasdanika.scrum.AbstractProduct}.
+	 * This creates an adapter for a {@link org.nasdanika.scrum.PartyReference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAbstractProductAdapter() {
-		if (abstractProductItemProvider == null) {
-			abstractProductItemProvider = new AbstractProductItemProvider(this);
+	public Adapter createPartyReferenceAdapter() {
+		if (partyReferenceItemProvider == null) {
+			partyReferenceItemProvider = new PartyReferenceItemProvider(this);
 		}
 
-		return abstractProductItemProvider;
+		return partyReferenceItemProvider;
 	}
 
 	/**
@@ -230,6 +276,29 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 		}
 
 		return productItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Component} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ComponentItemProvider componentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Component}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createComponentAdapter() {
+		if (componentItemProvider == null) {
+			componentItemProvider = new ComponentItemProvider(this);
+		}
+
+		return componentItemProvider;
 	}
 
 	/**
@@ -701,14 +770,21 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 	public void dispose() {
 		if (noteItemProvider != null) noteItemProvider.dispose();
 		if (scrumRealmItemProvider != null) scrumRealmItemProvider.dispose();
+		if (partyCategoryItemProvider != null) partyCategoryItemProvider.dispose();
 		if (organizationItemProvider != null) organizationItemProvider.dispose();
+		if (projectItemProvider != null) projectItemProvider.dispose();
 		if (personItemProvider != null) personItemProvider.dispose();
 		if (memberItemProvider != null) memberItemProvider.dispose();
-		if (abstractProductItemProvider != null) abstractProductItemProvider.dispose();
+		if (partyReferenceItemProvider != null) partyReferenceItemProvider.dispose();
+		if (scrumTeamItemProvider != null) scrumTeamItemProvider.dispose();
+		if (developmentTeamItemProvider != null) developmentTeamItemProvider.dispose();
 		if (productItemProvider != null) productItemProvider.dispose();
+		if (componentItemProvider != null) componentItemProvider.dispose();
 		if (targetGroupItemProvider != null) targetGroupItemProvider.dispose();
 		if (needItemProvider != null) needItemProvider.dispose();
 		if (productCategoryItemProvider != null) productCategoryItemProvider.dispose();
+		if (themeItemProvider != null) themeItemProvider.dispose();
+		if (productUserItemProvider != null) productUserItemProvider.dispose();
 		if (epicItemProvider != null) epicItemProvider.dispose();
 		if (featureItemProvider != null) featureItemProvider.dispose();
 		if (userStoryItemProvider != null) userStoryItemProvider.dispose();
@@ -716,11 +792,7 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 		if (releaseItemProvider != null) releaseItemProvider.dispose();
 		if (sprintItemProvider != null) sprintItemProvider.dispose();
 		if (artifactItemProvider != null) artifactItemProvider.dispose();
-		if (themeItemProvider != null) themeItemProvider.dispose();
-		if (productUserItemProvider != null) productUserItemProvider.dispose();
 		if (interactionItemProvider != null) interactionItemProvider.dispose();
-		if (scrumTeamItemProvider != null) scrumTeamItemProvider.dispose();
-		if (developmentTeamItemProvider != null) developmentTeamItemProvider.dispose();
 		if (fundingItemProvider != null) fundingItemProvider.dispose();
 	}
 

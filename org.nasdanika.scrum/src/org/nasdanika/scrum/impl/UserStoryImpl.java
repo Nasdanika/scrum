@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.scrum.ScrumPackage;
+import org.nasdanika.scrum.Sprint;
 import org.nasdanika.scrum.Task;
 import org.nasdanika.scrum.UserStory;
 
@@ -19,6 +20,7 @@ import org.nasdanika.scrum.UserStory;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.scrum.impl.UserStoryImpl#getTasks <em>Tasks</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.UserStoryImpl#getPlannedFor <em>Planned For</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,6 +53,16 @@ public class UserStoryImpl extends FunctionalityImpl implements UserStory {
 	@SuppressWarnings("unchecked")
 	public EList<Task> getTasks() {
 		return (EList<Task>)eGet(ScrumPackage.Literals.USER_STORY__TASKS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Sprint> getPlannedFor() {
+		return (EList<Sprint>)eGet(ScrumPackage.Literals.USER_STORY__PLANNED_FOR, true);
 	}
 
 } //UserStoryImpl

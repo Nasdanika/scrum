@@ -111,7 +111,8 @@ public class ScrumTeamItemProvider extends OrganizationItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ScrumPackage.Literals.SCRUM_TEAM__DEVELOPMENTTEAMS);
 			childrenFeatures.add(ScrumPackage.Literals.SCRUM_TEAM__PRODUCTS);
-			childrenFeatures.add(ScrumPackage.Literals.SCRUM_TEAM__INTERACTIONS);
+			childrenFeatures.add(ScrumPackage.Literals.SCRUM_TEAM__TEAM_INTERACTIONS);
+			childrenFeatures.add(ScrumPackage.Literals.SCRUM_TEAM__RELEASES);
 		}
 		return childrenFeatures;
 	}
@@ -169,7 +170,8 @@ public class ScrumTeamItemProvider extends OrganizationItemProvider {
 		switch (notification.getFeatureID(ScrumTeam.class)) {
 			case ScrumPackage.SCRUM_TEAM__DEVELOPMENTTEAMS:
 			case ScrumPackage.SCRUM_TEAM__PRODUCTS:
-			case ScrumPackage.SCRUM_TEAM__INTERACTIONS:
+			case ScrumPackage.SCRUM_TEAM__TEAM_INTERACTIONS:
+			case ScrumPackage.SCRUM_TEAM__RELEASES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -195,11 +197,6 @@ public class ScrumTeamItemProvider extends OrganizationItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ScrumPackage.Literals.SCRUM_TEAM__PRODUCTS,
-				 ScrumFactory.eINSTANCE.createAbstractProduct()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ScrumPackage.Literals.SCRUM_TEAM__PRODUCTS,
 				 ScrumFactory.eINSTANCE.createProduct()));
 
 		newChildDescriptors.add
@@ -209,8 +206,13 @@ public class ScrumTeamItemProvider extends OrganizationItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ScrumPackage.Literals.SCRUM_TEAM__INTERACTIONS,
+				(ScrumPackage.Literals.SCRUM_TEAM__TEAM_INTERACTIONS,
 				 ScrumFactory.eINSTANCE.createInteraction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.SCRUM_TEAM__RELEASES,
+				 ScrumFactory.eINSTANCE.createRelease()));
 	}
 
 }

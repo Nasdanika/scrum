@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.scrum.UserStory#getTasks <em>Tasks</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.UserStory#getPlannedFor <em>Planned For</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.scrum.ScrumPackage#getUserStory()
@@ -36,5 +37,23 @@ public interface UserStory extends Functionality {
 	 * @generated
 	 */
 	EList<Task> getTasks();
+
+	/**
+	 * Returns the value of the '<em><b>Planned For</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Sprint}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Sprint#getStories <em>Stories</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Planned For</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Planned For</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getUserStory_PlannedFor()
+	 * @see org.nasdanika.scrum.Sprint#getStories
+	 * @model opposite="stories"
+	 * @generated
+	 */
+	EList<Sprint> getPlannedFor();
 
 } // UserStory

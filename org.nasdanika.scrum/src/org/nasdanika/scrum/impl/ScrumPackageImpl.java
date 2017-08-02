@@ -4,6 +4,7 @@ package org.nasdanika.scrum.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -16,10 +17,12 @@ import org.nasdanika.cdo.security.SecurityPackage;
 
 import org.nasdanika.scrum.AbstractProduct;
 import org.nasdanika.scrum.Artifact;
+import org.nasdanika.scrum.Component;
 import org.nasdanika.scrum.DevelopmentTeam;
 import org.nasdanika.scrum.Epic;
 import org.nasdanika.scrum.Feature;
 import org.nasdanika.scrum.Functionality;
+import org.nasdanika.scrum.FunctionalityState;
 import org.nasdanika.scrum.Funding;
 import org.nasdanika.scrum.Interaction;
 import org.nasdanika.scrum.Member;
@@ -28,10 +31,13 @@ import org.nasdanika.scrum.Need;
 import org.nasdanika.scrum.Note;
 import org.nasdanika.scrum.Organization;
 import org.nasdanika.scrum.Party;
+import org.nasdanika.scrum.PartyCategory;
+import org.nasdanika.scrum.PartyReference;
 import org.nasdanika.scrum.Person;
 import org.nasdanika.scrum.Product;
 import org.nasdanika.scrum.ProductCategory;
 import org.nasdanika.scrum.ProductUser;
+import org.nasdanika.scrum.Project;
 import org.nasdanika.scrum.Release;
 import org.nasdanika.scrum.ScrumFactory;
 import org.nasdanika.scrum.ScrumPackage;
@@ -84,7 +90,21 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass partyCategoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass organizationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass projectEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,6 +125,13 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass partyReferenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass abstractProductEClass = null;
 
 	/**
@@ -113,6 +140,13 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * @generated
 	 */
 	private EClass productEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass componentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -232,6 +266,13 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * @generated
 	 */
 	private EClass fundingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum functionalityStateEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -410,6 +451,69 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getParty_References() {
+		return (EReference)partyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParty_UsesProducts() {
+		return (EReference)partyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParty_UsesFunctionality() {
+		return (EReference)partyEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParty_Interactions() {
+		return (EReference)partyEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParty_Fundings() {
+		return (EReference)partyEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPartyCategory() {
+		return partyCategoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPartyCategory_Children() {
+		return (EReference)partyCategoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOrganization() {
 		return organizationEClass;
 	}
@@ -421,6 +525,24 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 */
 	public EReference getOrganization_Members() {
 		return (EReference)organizationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProject() {
+		return projectEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProject_Members() {
+		return (EReference)projectEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -448,6 +570,33 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 */
 	public EReference getMember_Parties() {
 		return (EReference)memberEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMember_Assignments() {
+		return (EReference)memberEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPartyReference() {
+		return partyReferenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPartyReference_Party() {
+		return (EReference)partyReferenceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -500,7 +649,7 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProduct_Releases() {
+	public EReference getProduct_ProductUsers() {
 		return (EReference)productEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -509,7 +658,7 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProduct_ProductUsers() {
+	public EReference getProduct_Customers() {
 		return (EReference)productEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -518,7 +667,7 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProduct_Customers() {
+	public EReference getProduct_TargetGroups() {
 		return (EReference)productEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -527,8 +676,35 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProduct_TargetGroups() {
+	public EReference getProduct_Components() {
 		return (EReference)productEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProduct_Interactions() {
+		return (EReference)productEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getComponent() {
+		return componentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponent_Owners() {
+		return (EReference)componentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -644,6 +820,42 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFunctionality_Dependencies() {
+		return (EReference)functionalityEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunctionality_Dependants() {
+		return (EReference)functionalityEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunctionality_Interactions() {
+		return (EReference)functionalityEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunctionality_AssignedTo() {
+		return (EReference)functionalityEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEpic() {
 		return epicEClass;
 	}
@@ -680,7 +892,7 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFeature_Userstories() {
+	public EReference getFeature_UserStories() {
 		return (EReference)featureEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -716,8 +928,26 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getUserStory_PlannedFor() {
+		return (EReference)userStoryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTask() {
 		return taskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTask_Components() {
+		return (EReference)taskEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -752,6 +982,15 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRelease_Features() {
+		return (EReference)releaseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSprint() {
 		return sprintEClass;
 	}
@@ -761,8 +1000,26 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSprint_Features() {
-		return (EReference)sprintEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSprint_Start() {
+		return (EAttribute)sprintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSprint_End() {
+		return (EAttribute)sprintEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSprint_Stories() {
+		return (EReference)sprintEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -797,8 +1054,26 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTheme_Functionality() {
+		return (EReference)themeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProductUser() {
 		return productUserEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProductUser_Functionality() {
+		return (EReference)productUserEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -905,8 +1180,17 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScrumTeam_Interactions() {
+	public EReference getScrumTeam_TeamInteractions() {
 		return (EReference)scrumTeamEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScrumTeam_Releases() {
+		return (EReference)scrumTeamEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -925,6 +1209,15 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 */
 	public EReference getDevelopmentTeam_Members() {
 		return (EReference)developmentTeamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDevelopmentTeam_Products() {
+		return (EReference)developmentTeamEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -961,6 +1254,15 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 	 */
 	public EReference getFunding_Customers() {
 		return (EReference)fundingEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getFunctionalityState() {
+		return functionalityStateEEnum;
 	}
 
 	/**
@@ -1005,14 +1307,41 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 		createEReference(scrumRealmEClass, SCRUM_REALM__PARTIES);
 
 		partyEClass = createEClass(PARTY);
+		createEReference(partyEClass, PARTY__REFERENCES);
+		createEReference(partyEClass, PARTY__USES_PRODUCTS);
+		createEReference(partyEClass, PARTY__USES_FUNCTIONALITY);
+		createEReference(partyEClass, PARTY__INTERACTIONS);
+		createEReference(partyEClass, PARTY__FUNDINGS);
+
+		partyCategoryEClass = createEClass(PARTY_CATEGORY);
+		createEReference(partyCategoryEClass, PARTY_CATEGORY__CHILDREN);
 
 		organizationEClass = createEClass(ORGANIZATION);
 		createEReference(organizationEClass, ORGANIZATION__MEMBERS);
+
+		projectEClass = createEClass(PROJECT);
+		createEReference(projectEClass, PROJECT__MEMBERS);
 
 		personEClass = createEClass(PERSON);
 
 		memberEClass = createEClass(MEMBER);
 		createEReference(memberEClass, MEMBER__PARTIES);
+		createEReference(memberEClass, MEMBER__ASSIGNMENTS);
+
+		partyReferenceEClass = createEClass(PARTY_REFERENCE);
+		createEReference(partyReferenceEClass, PARTY_REFERENCE__PARTY);
+
+		scrumTeamEClass = createEClass(SCRUM_TEAM);
+		createEReference(scrumTeamEClass, SCRUM_TEAM__DEVELOPMENTTEAMS);
+		createEReference(scrumTeamEClass, SCRUM_TEAM__PRODUCT_OWNER);
+		createEReference(scrumTeamEClass, SCRUM_TEAM__SCRUM_MASTER);
+		createEReference(scrumTeamEClass, SCRUM_TEAM__PRODUCTS);
+		createEReference(scrumTeamEClass, SCRUM_TEAM__TEAM_INTERACTIONS);
+		createEReference(scrumTeamEClass, SCRUM_TEAM__RELEASES);
+
+		developmentTeamEClass = createEClass(DEVELOPMENT_TEAM);
+		createEReference(developmentTeamEClass, DEVELOPMENT_TEAM__MEMBERS);
+		createEReference(developmentTeamEClass, DEVELOPMENT_TEAM__PRODUCTS);
 
 		abstractProductEClass = createEClass(ABSTRACT_PRODUCT);
 		createEReference(abstractProductEClass, ABSTRACT_PRODUCT__DEVELOPMENT_TEAM);
@@ -1020,10 +1349,14 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 		productEClass = createEClass(PRODUCT);
 		createEReference(productEClass, PRODUCT__CAPABILITIES);
 		createEReference(productEClass, PRODUCT__THEMES);
-		createEReference(productEClass, PRODUCT__RELEASES);
 		createEReference(productEClass, PRODUCT__PRODUCT_USERS);
 		createEReference(productEClass, PRODUCT__CUSTOMERS);
 		createEReference(productEClass, PRODUCT__TARGET_GROUPS);
+		createEReference(productEClass, PRODUCT__COMPONENTS);
+		createEReference(productEClass, PRODUCT__INTERACTIONS);
+
+		componentEClass = createEClass(COMPONENT);
+		createEReference(componentEClass, COMPONENT__OWNERS);
 
 		targetGroupEClass = createEClass(TARGET_GROUP);
 		createEReference(targetGroupEClass, TARGET_GROUP__NEEDS);
@@ -1034,39 +1367,50 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 		productCategoryEClass = createEClass(PRODUCT_CATEGORY);
 		createEReference(productCategoryEClass, PRODUCT_CATEGORY__PRODUCTS);
 
+		themeEClass = createEClass(THEME);
+		createEReference(themeEClass, THEME__FUNCTIONALITY);
+
+		productUserEClass = createEClass(PRODUCT_USER);
+		createEReference(productUserEClass, PRODUCT_USER__FUNCTIONALITY);
+
 		functionalityEClass = createEClass(FUNCTIONALITY);
 		createEReference(functionalityEClass, FUNCTIONALITY__USERS);
 		createEReference(functionalityEClass, FUNCTIONALITY__THEMES);
 		createEReference(functionalityEClass, FUNCTIONALITY__CUSTOMERS);
 		createEReference(functionalityEClass, FUNCTIONALITY__FUNDINGS);
 		createEReference(functionalityEClass, FUNCTIONALITY__SATISFIES);
+		createEReference(functionalityEClass, FUNCTIONALITY__DEPENDENCIES);
+		createEReference(functionalityEClass, FUNCTIONALITY__DEPENDANTS);
+		createEReference(functionalityEClass, FUNCTIONALITY__INTERACTIONS);
+		createEReference(functionalityEClass, FUNCTIONALITY__ASSIGNED_TO);
 
 		epicEClass = createEClass(EPIC);
 		createEReference(epicEClass, EPIC__CHILDREN);
 		createEReference(epicEClass, EPIC__FEATURES);
 
 		featureEClass = createEClass(FEATURE);
-		createEReference(featureEClass, FEATURE__USERSTORIES);
+		createEReference(featureEClass, FEATURE__USER_STORIES);
 		createEReference(featureEClass, FEATURE__PLANNED_FOR);
 
 		userStoryEClass = createEClass(USER_STORY);
 		createEReference(userStoryEClass, USER_STORY__TASKS);
+		createEReference(userStoryEClass, USER_STORY__PLANNED_FOR);
 
 		taskEClass = createEClass(TASK);
+		createEReference(taskEClass, TASK__COMPONENTS);
 
 		releaseEClass = createEClass(RELEASE);
 		createEReference(releaseEClass, RELEASE__SPRINTS);
 		createEReference(releaseEClass, RELEASE__ARTIFACTS);
+		createEReference(releaseEClass, RELEASE__FEATURES);
 
 		sprintEClass = createEClass(SPRINT);
-		createEReference(sprintEClass, SPRINT__FEATURES);
+		createEAttribute(sprintEClass, SPRINT__START);
+		createEAttribute(sprintEClass, SPRINT__END);
+		createEReference(sprintEClass, SPRINT__STORIES);
 
 		artifactEClass = createEClass(ARTIFACT);
 		createEReference(artifactEClass, ARTIFACT__OWNER);
-
-		themeEClass = createEClass(THEME);
-
-		productUserEClass = createEClass(PRODUCT_USER);
 
 		interactionEClass = createEClass(INTERACTION);
 		createEAttribute(interactionEClass, INTERACTION__DATE);
@@ -1075,20 +1419,13 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 		createEReference(interactionEClass, INTERACTION__FUNCTIONALITY);
 		createEReference(interactionEClass, INTERACTION__PARTICIPANT);
 
-		scrumTeamEClass = createEClass(SCRUM_TEAM);
-		createEReference(scrumTeamEClass, SCRUM_TEAM__DEVELOPMENTTEAMS);
-		createEReference(scrumTeamEClass, SCRUM_TEAM__PRODUCT_OWNER);
-		createEReference(scrumTeamEClass, SCRUM_TEAM__SCRUM_MASTER);
-		createEReference(scrumTeamEClass, SCRUM_TEAM__PRODUCTS);
-		createEReference(scrumTeamEClass, SCRUM_TEAM__INTERACTIONS);
-
-		developmentTeamEClass = createEClass(DEVELOPMENT_TEAM);
-		createEReference(developmentTeamEClass, DEVELOPMENT_TEAM__MEMBERS);
-
 		fundingEClass = createEClass(FUNDING);
 		createEAttribute(fundingEClass, FUNDING__DATE);
 		createEAttribute(fundingEClass, FUNDING__DESCRIPTION);
 		createEReference(fundingEClass, FUNDING__CUSTOMERS);
+
+		// Create enums
+		functionalityStateEEnum = createEEnum(FUNCTIONALITY_STATE);
 	}
 
 	/**
@@ -1125,14 +1462,22 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 		scrumRealmEClass.getESuperTypes().add(theSecurityPackage.getLoginPasswordRealm());
 		scrumRealmEClass.getESuperTypes().add(this.getModelElement());
 		partyEClass.getESuperTypes().add(this.getModelElement());
+		partyCategoryEClass.getESuperTypes().add(this.getParty());
 		organizationEClass.getESuperTypes().add(this.getParty());
+		projectEClass.getESuperTypes().add(this.getParty());
 		personEClass.getESuperTypes().add(this.getParty());
 		memberEClass.getESuperTypes().add(this.getModelElement());
+		partyReferenceEClass.getESuperTypes().add(this.getParty());
+		scrumTeamEClass.getESuperTypes().add(this.getOrganization());
+		developmentTeamEClass.getESuperTypes().add(this.getModelElement());
 		abstractProductEClass.getESuperTypes().add(this.getModelElement());
 		productEClass.getESuperTypes().add(this.getAbstractProduct());
+		componentEClass.getESuperTypes().add(this.getModelElement());
 		targetGroupEClass.getESuperTypes().add(this.getModelElement());
 		needEClass.getESuperTypes().add(this.getModelElement());
 		productCategoryEClass.getESuperTypes().add(this.getAbstractProduct());
+		themeEClass.getESuperTypes().add(this.getModelElement());
+		productUserEClass.getESuperTypes().add(this.getModelElement());
 		functionalityEClass.getESuperTypes().add(this.getModelElement());
 		epicEClass.getESuperTypes().add(this.getFunctionality());
 		featureEClass.getESuperTypes().add(this.getFunctionality());
@@ -1141,10 +1486,6 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 		releaseEClass.getESuperTypes().add(this.getModelElement());
 		sprintEClass.getESuperTypes().add(this.getModelElement());
 		artifactEClass.getESuperTypes().add(this.getModelElement());
-		themeEClass.getESuperTypes().add(this.getModelElement());
-		productUserEClass.getESuperTypes().add(this.getModelElement());
-		scrumTeamEClass.getESuperTypes().add(this.getOrganization());
-		developmentTeamEClass.getESuperTypes().add(this.getModelElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelElementEClass, ModelElement.class, "ModelElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1169,25 +1510,56 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 		initEReference(getScrumRealm_Parties(), this.getParty(), null, "parties", null, 0, -1, ScrumRealm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(partyEClass, Party.class, "Party", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getParty_References(), this.getPartyReference(), this.getPartyReference_Party(), "references", null, 0, -1, Party.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParty_UsesProducts(), this.getProduct(), this.getProduct_Customers(), "usesProducts", null, 0, -1, Party.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParty_UsesFunctionality(), this.getFunctionality(), this.getFunctionality_Customers(), "usesFunctionality", null, 0, -1, Party.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParty_Interactions(), this.getInteraction(), this.getInteraction_Participant(), "interactions", null, 0, -1, Party.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParty_Fundings(), this.getFunding(), this.getFunding_Customers(), "fundings", null, 0, -1, Party.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(partyCategoryEClass, PartyCategory.class, "PartyCategory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPartyCategory_Children(), this.getParty(), null, "children", null, 0, -1, PartyCategory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(organizationEClass, Organization.class, "Organization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOrganization_Members(), this.getMember(), null, "members", null, 0, -1, Organization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProject_Members(), this.getMember(), null, "members", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(memberEClass, Member.class, "Member", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMember_Parties(), this.getParty(), null, "parties", null, 0, -1, Member.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMember_Assignments(), this.getFunctionality(), this.getFunctionality_AssignedTo(), "assignments", null, 0, -1, Member.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(abstractProductEClass, AbstractProduct.class, "AbstractProduct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractProduct_DevelopmentTeam(), this.getDevelopmentTeam(), null, "developmentTeam", null, 0, 1, AbstractProduct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(partyReferenceEClass, PartyReference.class, "PartyReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPartyReference_Party(), this.getParty(), this.getParty_References(), "party", null, 0, 1, PartyReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(scrumTeamEClass, ScrumTeam.class, "ScrumTeam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getScrumTeam_Developmentteams(), this.getDevelopmentTeam(), null, "developmentteams", null, 0, -1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScrumTeam_ProductOwner(), this.getPerson(), null, "productOwner", null, 0, 1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScrumTeam_ScrumMaster(), this.getPerson(), null, "scrumMaster", null, 0, 1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScrumTeam_Products(), this.getAbstractProduct(), null, "products", null, 0, -1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScrumTeam_TeamInteractions(), this.getInteraction(), null, "teamInteractions", null, 0, -1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScrumTeam_Releases(), this.getRelease(), null, "releases", null, 0, -1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(developmentTeamEClass, DevelopmentTeam.class, "DevelopmentTeam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDevelopmentTeam_Members(), this.getMember(), null, "members", null, 0, -1, DevelopmentTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDevelopmentTeam_Products(), this.getAbstractProduct(), this.getAbstractProduct_DevelopmentTeam(), "products", null, 0, -1, DevelopmentTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abstractProductEClass, AbstractProduct.class, "AbstractProduct", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractProduct_DevelopmentTeam(), this.getDevelopmentTeam(), this.getDevelopmentTeam_Products(), "developmentTeam", null, 0, 1, AbstractProduct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(productEClass, Product.class, "Product", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProduct_Capabilities(), this.getEpic(), null, "capabilities", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_Themes(), this.getTheme(), null, "themes", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_Releases(), this.getRelease(), null, "releases", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_ProductUsers(), this.getProductUser(), null, "productUsers", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_Customers(), this.getParty(), null, "customers", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProduct_Customers(), this.getParty(), this.getParty_UsesProducts(), "customers", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_TargetGroups(), this.getTargetGroup(), null, "targetGroups", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProduct_Components(), this.getComponent(), null, "components", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProduct_Interactions(), this.getInteraction(), this.getInteraction_Products(), "interactions", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponent_Owners(), this.getParty(), null, "owners", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(targetGroupEClass, TargetGroup.class, "TargetGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTargetGroup_Needs(), this.getNeed(), null, "needs", null, 0, -1, TargetGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1198,61 +1570,70 @@ public class ScrumPackageImpl extends EPackageImpl implements ScrumPackage {
 		initEClass(productCategoryEClass, ProductCategory.class, "ProductCategory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProductCategory_Products(), this.getAbstractProduct(), null, "products", null, 0, -1, ProductCategory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(themeEClass, Theme.class, "Theme", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTheme_Functionality(), this.getFunctionality(), this.getFunctionality_Themes(), "functionality", null, 0, -1, Theme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(productUserEClass, ProductUser.class, "ProductUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProductUser_Functionality(), this.getFunctionality(), this.getFunctionality_Users(), "functionality", null, 0, -1, ProductUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(functionalityEClass, Functionality.class, "Functionality", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFunctionality_Users(), this.getProductUser(), null, "users", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionality_Themes(), this.getTheme(), null, "themes", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionality_Customers(), this.getParty(), null, "customers", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_Users(), this.getProductUser(), this.getProductUser_Functionality(), "users", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_Themes(), this.getTheme(), this.getTheme_Functionality(), "themes", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_Customers(), this.getParty(), this.getParty_UsesFunctionality(), "customers", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionality_Fundings(), this.getFunding(), null, "fundings", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionality_Satisfies(), this.getNeed(), this.getNeed_SatisfiedBy(), "satisfies", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_Dependencies(), this.getFunctionality(), this.getFunctionality_Dependants(), "dependencies", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_Dependants(), this.getFunctionality(), this.getFunctionality_Dependencies(), "dependants", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_Interactions(), this.getInteraction(), this.getInteraction_Functionality(), "interactions", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionality_AssignedTo(), this.getMember(), this.getMember_Assignments(), "assignedTo", null, 0, -1, Functionality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(epicEClass, Epic.class, "Epic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEpic_Children(), this.getEpic(), null, "children", null, 0, -1, Epic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEpic_Features(), this.getFeature(), null, "features", null, 0, -1, Epic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeature_Userstories(), this.getUserStory(), null, "userstories", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeature_PlannedFor(), this.getSprint(), this.getSprint_Features(), "plannedFor", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeature_UserStories(), this.getUserStory(), null, "userStories", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeature_PlannedFor(), this.getRelease(), this.getRelease_Features(), "plannedFor", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userStoryEClass, UserStory.class, "UserStory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUserStory_Tasks(), this.getTask(), null, "tasks", null, 0, -1, UserStory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUserStory_PlannedFor(), this.getSprint(), this.getSprint_Stories(), "plannedFor", null, 0, -1, UserStory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTask_Components(), this.getComponent(), null, "components", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(releaseEClass, Release.class, "Release", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRelease_Sprints(), this.getSprint(), null, "sprints", null, 0, -1, Release.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelease_Artifacts(), this.getArtifact(), null, "artifacts", null, 0, -1, Release.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelease_Features(), this.getFeature(), this.getFeature_PlannedFor(), "features", null, 0, -1, Release.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sprintEClass, Sprint.class, "Sprint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSprint_Features(), this.getFeature(), this.getFeature_PlannedFor(), "features", null, 0, -1, Sprint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSprint_Start(), ecorePackage.getEDate(), "start", null, 1, 1, Sprint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSprint_End(), ecorePackage.getEDate(), "end", null, 1, 1, Sprint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSprint_Stories(), this.getUserStory(), this.getUserStory_PlannedFor(), "stories", null, 0, -1, Sprint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(artifactEClass, Artifact.class, "Artifact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArtifact_Owner(), this.getParty(), null, "owner", null, 0, -1, Artifact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(themeEClass, Theme.class, "Theme", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(productUserEClass, ProductUser.class, "ProductUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(interactionEClass, Interaction.class, "Interaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInteraction_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInteraction_Description(), ecorePackage.getEString(), "description", null, 1, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInteraction_Products(), this.getProduct(), null, "products", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInteraction_Functionality(), this.getFunctionality(), null, "functionality", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInteraction_Participant(), this.getParty(), null, "participant", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(scrumTeamEClass, ScrumTeam.class, "ScrumTeam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScrumTeam_Developmentteams(), this.getDevelopmentTeam(), null, "developmentteams", null, 0, -1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScrumTeam_ProductOwner(), this.getPerson(), null, "productOwner", null, 0, 1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScrumTeam_ScrumMaster(), this.getPerson(), null, "scrumMaster", null, 0, 1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScrumTeam_Products(), this.getAbstractProduct(), null, "products", null, 0, -1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScrumTeam_Interactions(), this.getInteraction(), null, "interactions", null, 0, -1, ScrumTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(developmentTeamEClass, DevelopmentTeam.class, "DevelopmentTeam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDevelopmentTeam_Members(), this.getMember(), null, "members", null, 0, -1, DevelopmentTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInteraction_Products(), this.getProduct(), this.getProduct_Interactions(), "products", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInteraction_Functionality(), this.getFunctionality(), this.getFunctionality_Interactions(), "functionality", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInteraction_Participant(), this.getParty(), this.getParty_Interactions(), "participant", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fundingEClass, Funding.class, "Funding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunding_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Funding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFunding_Description(), ecorePackage.getEString(), "description", null, 1, 1, Funding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunding_Customers(), this.getParty(), null, "customers", null, 0, -1, Funding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunding_Customers(), this.getParty(), this.getParty_Fundings(), "customers", null, 0, -1, Funding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(functionalityStateEEnum, FunctionalityState.class, "FunctionalityState");
+		addEEnumLiteral(functionalityStateEEnum, FunctionalityState.NEW);
+		addEEnumLiteral(functionalityStateEEnum, FunctionalityState.WORK_IN_PROGRESS);
+		addEEnumLiteral(functionalityStateEEnum, FunctionalityState.ON_HOLD);
+		addEEnumLiteral(functionalityStateEEnum, FunctionalityState.DONE);
+		addEEnumLiteral(functionalityStateEEnum, FunctionalityState.CANCELLED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="org.nasdanika.scrum.editor.target" sequenceNumber="3">
+<?pde version="3.8"?><target name="org.nasdanika.scrum.editor.target" sequenceNumber="4">
 <locations>
 <location path="${eclipse_home}" type="Profile"/>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.nasdanika.feature.feature.group" version="1.1.0.201707300335"/>
-<repository location="http://www.nasdanika.org/server/repository"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.nasdanika.presentation.feature.feature.group" version="0.1.0.201707301405"/>
 <repository location="http://www.nasdanika.org/products/presentation/repository"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.nasdanika.cdo.security.feature.feature.group" version="1.1.0.201707300335"/>
+<unit id="org.nasdanika.feature.feature.group" version="1.1.0.201707300335"/>
+<repository location="http://www.nasdanika.org/server/repository"/>
 </location>
 </locations>
 </target>

@@ -16,12 +16,13 @@ package org.nasdanika.scrum;
  * </ul>
  *
  * @see org.nasdanika.scrum.ScrumPackage#getAbstractProduct()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface AbstractProduct extends ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Development Team</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.DevelopmentTeam#getProducts <em>Products</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Development Team</em>' reference isn't clear,
@@ -31,7 +32,8 @@ public interface AbstractProduct extends ModelElement {
 	 * @return the value of the '<em>Development Team</em>' reference.
 	 * @see #setDevelopmentTeam(DevelopmentTeam)
 	 * @see org.nasdanika.scrum.ScrumPackage#getAbstractProduct_DevelopmentTeam()
-	 * @model
+	 * @see org.nasdanika.scrum.DevelopmentTeam#getProducts
+	 * @model opposite="products"
 	 * @generated
 	 */
 	DevelopmentTeam getDevelopmentTeam();

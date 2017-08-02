@@ -6,6 +6,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.nasdanika.scrum.Functionality;
 import org.nasdanika.scrum.Member;
 import org.nasdanika.scrum.Party;
 import org.nasdanika.scrum.ScrumPackage;
@@ -19,6 +20,7 @@ import org.nasdanika.scrum.ScrumPackage;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.scrum.impl.MemberImpl#getParties <em>Parties</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.MemberImpl#getAssignments <em>Assignments</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,6 +53,16 @@ public class MemberImpl extends ModelElementImpl implements Member {
 	@SuppressWarnings("unchecked")
 	public EList<Party> getParties() {
 		return (EList<Party>)eGet(ScrumPackage.Literals.MEMBER__PARTIES, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Functionality> getAssignments() {
+		return (EList<Functionality>)eGet(ScrumPackage.Literals.MEMBER__ASSIGNMENTS, true);
 	}
 
 } //MemberImpl

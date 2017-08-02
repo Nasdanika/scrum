@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.scrum.Artifact;
+import org.nasdanika.scrum.Feature;
 import org.nasdanika.scrum.Release;
 import org.nasdanika.scrum.ScrumPackage;
 import org.nasdanika.scrum.Sprint;
@@ -21,6 +22,7 @@ import org.nasdanika.scrum.Sprint;
  * <ul>
  *   <li>{@link org.nasdanika.scrum.impl.ReleaseImpl#getSprints <em>Sprints</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ReleaseImpl#getArtifacts <em>Artifacts</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.ReleaseImpl#getFeatures <em>Features</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,6 +65,16 @@ public class ReleaseImpl extends ModelElementImpl implements Release {
 	@SuppressWarnings("unchecked")
 	public EList<Artifact> getArtifacts() {
 		return (EList<Artifact>)eGet(ScrumPackage.Literals.RELEASE__ARTIFACTS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Feature> getFeatures() {
+		return (EList<Feature>)eGet(ScrumPackage.Literals.RELEASE__FEATURES, true);
 	}
 
 } //ReleaseImpl

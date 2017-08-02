@@ -102,22 +102,38 @@ public class ScrumValidator extends EObjectValidator {
 				return validateScrumRealm((ScrumRealm)value, diagnostics, context);
 			case ScrumPackage.PARTY:
 				return validateParty((Party)value, diagnostics, context);
+			case ScrumPackage.PARTY_CATEGORY:
+				return validatePartyCategory((PartyCategory)value, diagnostics, context);
 			case ScrumPackage.ORGANIZATION:
 				return validateOrganization((Organization)value, diagnostics, context);
+			case ScrumPackage.PROJECT:
+				return validateProject((Project)value, diagnostics, context);
 			case ScrumPackage.PERSON:
 				return validatePerson((Person)value, diagnostics, context);
 			case ScrumPackage.MEMBER:
 				return validateMember((Member)value, diagnostics, context);
+			case ScrumPackage.PARTY_REFERENCE:
+				return validatePartyReference((PartyReference)value, diagnostics, context);
+			case ScrumPackage.SCRUM_TEAM:
+				return validateScrumTeam((ScrumTeam)value, diagnostics, context);
+			case ScrumPackage.DEVELOPMENT_TEAM:
+				return validateDevelopmentTeam((DevelopmentTeam)value, diagnostics, context);
 			case ScrumPackage.ABSTRACT_PRODUCT:
 				return validateAbstractProduct((AbstractProduct)value, diagnostics, context);
 			case ScrumPackage.PRODUCT:
 				return validateProduct((Product)value, diagnostics, context);
+			case ScrumPackage.COMPONENT:
+				return validateComponent((Component)value, diagnostics, context);
 			case ScrumPackage.TARGET_GROUP:
 				return validateTargetGroup((TargetGroup)value, diagnostics, context);
 			case ScrumPackage.NEED:
 				return validateNeed((Need)value, diagnostics, context);
 			case ScrumPackage.PRODUCT_CATEGORY:
 				return validateProductCategory((ProductCategory)value, diagnostics, context);
+			case ScrumPackage.THEME:
+				return validateTheme((Theme)value, diagnostics, context);
+			case ScrumPackage.PRODUCT_USER:
+				return validateProductUser((ProductUser)value, diagnostics, context);
 			case ScrumPackage.FUNCTIONALITY:
 				return validateFunctionality((Functionality)value, diagnostics, context);
 			case ScrumPackage.EPIC:
@@ -134,18 +150,12 @@ public class ScrumValidator extends EObjectValidator {
 				return validateSprint((Sprint)value, diagnostics, context);
 			case ScrumPackage.ARTIFACT:
 				return validateArtifact((Artifact)value, diagnostics, context);
-			case ScrumPackage.THEME:
-				return validateTheme((Theme)value, diagnostics, context);
-			case ScrumPackage.PRODUCT_USER:
-				return validateProductUser((ProductUser)value, diagnostics, context);
 			case ScrumPackage.INTERACTION:
 				return validateInteraction((Interaction)value, diagnostics, context);
-			case ScrumPackage.SCRUM_TEAM:
-				return validateScrumTeam((ScrumTeam)value, diagnostics, context);
-			case ScrumPackage.DEVELOPMENT_TEAM:
-				return validateDevelopmentTeam((DevelopmentTeam)value, diagnostics, context);
 			case ScrumPackage.FUNDING:
 				return validateFunding((Funding)value, diagnostics, context);
+			case ScrumPackage.FUNCTIONALITY_STATE:
+				return validateFunctionalityState((FunctionalityState)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -232,6 +242,25 @@ public class ScrumValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validatePartyCategory(PartyCategory partyCategory, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject)partyCategory, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)partyCategory, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)partyCategory, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)partyCategory, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)partyCategory, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)partyCategory, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)partyCategory, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)partyCategory, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)partyCategory, diagnostics, context);
+		if (result || diagnostics != null) result &= validateModelElement_validate(partyCategory, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateOrganization(Organization organization, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment((EObject)organization, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms((EObject)organization, diagnostics, context);
@@ -243,6 +272,25 @@ public class ScrumValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)organization, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)organization, diagnostics, context);
 		if (result || diagnostics != null) result &= validateModelElement_validate(organization, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateProject(Project project, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject)project, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)project, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)project, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)project, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)project, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)project, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)project, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)project, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)project, diagnostics, context);
+		if (result || diagnostics != null) result &= validateModelElement_validate(project, diagnostics, context);
 		return result;
 	}
 
@@ -289,6 +337,25 @@ public class ScrumValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validatePartyReference(PartyReference partyReference, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject)partyReference, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)partyReference, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)partyReference, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)partyReference, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)partyReference, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)partyReference, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)partyReference, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)partyReference, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)partyReference, diagnostics, context);
+		if (result || diagnostics != null) result &= validateModelElement_validate(partyReference, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateAbstractProduct(AbstractProduct abstractProduct, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment((EObject)abstractProduct, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms((EObject)abstractProduct, diagnostics, context);
@@ -319,6 +386,25 @@ public class ScrumValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)product, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)product, diagnostics, context);
 		if (result || diagnostics != null) result &= validateModelElement_validate(product, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateComponent(Component component, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject)component, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)component, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)component, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)component, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)component, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)component, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)component, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)component, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)component, diagnostics, context);
+		if (result || diagnostics != null) result &= validateModelElement_validate(component, diagnostics, context);
 		return result;
 	}
 
@@ -623,6 +709,15 @@ public class ScrumValidator extends EObjectValidator {
 	 */
 	public boolean validateFunding(Funding funding, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint((EObject)funding, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFunctionalityState(FunctionalityState functionalityState, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**

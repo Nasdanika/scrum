@@ -7,8 +7,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.scrum.Feature;
+import org.nasdanika.scrum.Release;
 import org.nasdanika.scrum.ScrumPackage;
-import org.nasdanika.scrum.Sprint;
 import org.nasdanika.scrum.UserStory;
 
 /**
@@ -19,7 +19,7 @@ import org.nasdanika.scrum.UserStory;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.scrum.impl.FeatureImpl#getUserstories <em>Userstories</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.FeatureImpl#getUserStories <em>User Stories</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.FeatureImpl#getPlannedFor <em>Planned For</em>}</li>
  * </ul>
  *
@@ -51,8 +51,8 @@ public class FeatureImpl extends FunctionalityImpl implements Feature {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<UserStory> getUserstories() {
-		return (EList<UserStory>)eGet(ScrumPackage.Literals.FEATURE__USERSTORIES, true);
+	public EList<UserStory> getUserStories() {
+		return (EList<UserStory>)eGet(ScrumPackage.Literals.FEATURE__USER_STORIES, true);
 	}
 
 	/**
@@ -61,8 +61,8 @@ public class FeatureImpl extends FunctionalityImpl implements Feature {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Sprint> getPlannedFor() {
-		return (EList<Sprint>)eGet(ScrumPackage.Literals.FEATURE__PLANNED_FOR, true);
+	public EList<Release> getPlannedFor() {
+		return (EList<Release>)eGet(ScrumPackage.Literals.FEATURE__PLANNED_FOR, true);
 	}
 
 } //FeatureImpl
