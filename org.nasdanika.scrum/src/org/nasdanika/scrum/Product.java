@@ -13,10 +13,11 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.scrum.Product#getCustomers <em>Customers</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Product#getRequests <em>Requests</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getThemes <em>Themes</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getProductUsers <em>Product Users</em>}</li>
- *   <li>{@link org.nasdanika.scrum.Product#getCustomers <em>Customers</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getTargetGroups <em>Target Groups</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getComponents <em>Components</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Product#getInteractions <em>Interactions</em>}</li>
@@ -27,6 +28,24 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Product extends AbstractProduct {
+	/**
+	 * Returns the value of the '<em><b>Customers</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Customer}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Customer#getUsesProducts <em>Uses Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customers</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Customers</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getProduct_Customers()
+	 * @see org.nasdanika.scrum.Customer#getUsesProducts
+	 * @model opposite="usesProducts"
+	 * @generated
+	 */
+	EList<Customer> getCustomers();
+
 	/**
 	 * Returns the value of the '<em><b>Capabilities</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.scrum.Epic}.
@@ -74,24 +93,6 @@ public interface Product extends AbstractProduct {
 	 * @generated
 	 */
 	EList<ProductUser> getProductUsers();
-
-	/**
-	 * Returns the value of the '<em><b>Customers</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.scrum.Party}.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Party#getUsesProducts <em>Uses Products</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Customers</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Customers</em>' reference list.
-	 * @see org.nasdanika.scrum.ScrumPackage#getProduct_Customers()
-	 * @see org.nasdanika.scrum.Party#getUsesProducts
-	 * @model opposite="usesProducts"
-	 * @generated
-	 */
-	EList<Party> getCustomers();
 
 	/**
 	 * Returns the value of the '<em><b>Target Groups</b></em>' containment reference list.
@@ -142,5 +143,23 @@ public interface Product extends AbstractProduct {
 	 * @generated
 	 */
 	EList<Interaction> getInteractions();
+
+	/**
+	 * Returns the value of the '<em><b>Requests</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Request}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Request#getRelatedProducts <em>Related Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Requests</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Requests</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getProduct_Requests()
+	 * @see org.nasdanika.scrum.Request#getRelatedProducts
+	 * @model opposite="relatedProducts"
+	 * @generated
+	 */
+	EList<Request> getRequests();
 
 } // Product

@@ -82,8 +82,8 @@ public interface Funding extends CDOObject {
 
 	/**
 	 * Returns the value of the '<em><b>Customers</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.scrum.Party}.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Party#getFundings <em>Fundings</em>}'.
+	 * The list contents are of type {@link org.nasdanika.scrum.Customer}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Customer#getFundings <em>Fundings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Customers</em>' reference list isn't clear,
@@ -92,10 +92,10 @@ public interface Funding extends CDOObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Customers</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getFunding_Customers()
-	 * @see org.nasdanika.scrum.Party#getFundings
+	 * @see org.nasdanika.scrum.Customer#getFundings
 	 * @model opposite="fundings"
 	 * @generated
 	 */
-	EList<Party> getCustomers();
+	EList<Customer> getCustomers();
 
 } // Funding

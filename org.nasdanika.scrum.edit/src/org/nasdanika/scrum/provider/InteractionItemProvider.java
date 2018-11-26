@@ -48,6 +48,8 @@ public class InteractionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addDatePropertyDescriptor(object);
+			addCustomersPropertyDescriptor(object);
+			addRequestsPropertyDescriptor(object);
 			addProductsPropertyDescriptor(object);
 			addFunctionalityPropertyDescriptor(object);
 			addParticipantPropertyDescriptor(object);
@@ -73,6 +75,50 @@ public class InteractionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Customers feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCustomersPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Interaction_customers_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Interaction_customers_feature", "_UI_Interaction_type"),
+				 ScrumPackage.Literals.INTERACTION__CUSTOMERS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Requests feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRequestsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Interaction_requests_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Interaction_requests_feature", "_UI_Interaction_type"),
+				 ScrumPackage.Literals.INTERACTION__REQUESTS,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

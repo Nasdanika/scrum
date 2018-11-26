@@ -127,6 +127,14 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 				return createProductAdapter();
 			}
 			@Override
+			public Adapter caseCustomer(Customer object) {
+				return createCustomerAdapter();
+			}
+			@Override
+			public Adapter caseRequest(Request object) {
+				return createRequestAdapter();
+			}
+			@Override
 			public Adapter caseComponent(Component object) {
 				return createComponentAdapter();
 			}
@@ -383,6 +391,34 @@ public class ScrumAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProductAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Customer <em>Customer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Customer
+	 * @generated
+	 */
+	public Adapter createCustomerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.scrum.Request <em>Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.scrum.Request
+	 * @generated
+	 */
+	public Adapter createRequestAdapter() {
 		return null;
 	}
 

@@ -103,6 +103,24 @@ public interface ScrumFactory extends EFactory {
 	Product createProduct();
 
 	/**
+	 * Returns a new object of class '<em>Customer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer</em>'.
+	 * @generated
+	 */
+	Customer createCustomer();
+
+	/**
+	 * Returns a new object of class '<em>Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Request</em>'.
+	 * @generated
+	 */
+	Request createRequest();
+
+	/**
 	 * Returns a new object of class '<em>Component</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

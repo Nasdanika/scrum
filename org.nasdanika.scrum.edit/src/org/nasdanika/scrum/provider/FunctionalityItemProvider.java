@@ -51,6 +51,7 @@ public class FunctionalityItemProvider extends ModelElementItemProvider {
 			addThemesPropertyDescriptor(object);
 			addCustomersPropertyDescriptor(object);
 			addSatisfiesPropertyDescriptor(object);
+			addFulfillsPropertyDescriptor(object);
 			addDependenciesPropertyDescriptor(object);
 			addDependantsPropertyDescriptor(object);
 			addInteractionsPropertyDescriptor(object);
@@ -139,6 +140,28 @@ public class FunctionalityItemProvider extends ModelElementItemProvider {
 				 getString("_UI_Functionality_satisfies_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Functionality_satisfies_feature", "_UI_Functionality_type"),
 				 ScrumPackage.Literals.FUNCTIONALITY__SATISFIES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Fulfills feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFulfillsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Functionality_fulfills_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Functionality_fulfills_feature", "_UI_Functionality_type"),
+				 ScrumPackage.Literals.FUNCTIONALITY__FULFILLS,
 				 true,
 				 false,
 				 true,

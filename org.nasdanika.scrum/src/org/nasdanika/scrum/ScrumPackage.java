@@ -381,22 +381,13 @@ public interface ScrumPackage extends EPackage {
 	int PARTY__REFERENCES = MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Uses Products</b></em>' reference list.
+	 * The feature id for the '<em><b>Customer Of</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARTY__USES_PRODUCTS = MODEL_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Uses Functionality</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTY__USES_FUNCTIONALITY = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int PARTY__CUSTOMER_OF = MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
@@ -405,16 +396,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARTY__INTERACTIONS = MODEL_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Fundings</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTY__FUNDINGS = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int PARTY__INTERACTIONS = MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Party</em>' class.
@@ -423,7 +405,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARTY_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int PARTY_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Validate</em>' operation.
@@ -490,22 +472,13 @@ public interface ScrumPackage extends EPackage {
 	int PARTY_CATEGORY__REFERENCES = PARTY__REFERENCES;
 
 	/**
-	 * The feature id for the '<em><b>Uses Products</b></em>' reference list.
+	 * The feature id for the '<em><b>Customer Of</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARTY_CATEGORY__USES_PRODUCTS = PARTY__USES_PRODUCTS;
-
-	/**
-	 * The feature id for the '<em><b>Uses Functionality</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTY_CATEGORY__USES_FUNCTIONALITY = PARTY__USES_FUNCTIONALITY;
+	int PARTY_CATEGORY__CUSTOMER_OF = PARTY__CUSTOMER_OF;
 
 	/**
 	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
@@ -515,15 +488,6 @@ public interface ScrumPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARTY_CATEGORY__INTERACTIONS = PARTY__INTERACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Fundings</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTY_CATEGORY__FUNDINGS = PARTY__FUNDINGS;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -608,22 +572,13 @@ public interface ScrumPackage extends EPackage {
 	int ORGANIZATION__REFERENCES = PARTY__REFERENCES;
 
 	/**
-	 * The feature id for the '<em><b>Uses Products</b></em>' reference list.
+	 * The feature id for the '<em><b>Customer Of</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORGANIZATION__USES_PRODUCTS = PARTY__USES_PRODUCTS;
-
-	/**
-	 * The feature id for the '<em><b>Uses Functionality</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORGANIZATION__USES_FUNCTIONALITY = PARTY__USES_FUNCTIONALITY;
+	int ORGANIZATION__CUSTOMER_OF = PARTY__CUSTOMER_OF;
 
 	/**
 	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
@@ -633,15 +588,6 @@ public interface ScrumPackage extends EPackage {
 	 * @ordered
 	 */
 	int ORGANIZATION__INTERACTIONS = PARTY__INTERACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Fundings</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORGANIZATION__FUNDINGS = PARTY__FUNDINGS;
 
 	/**
 	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
@@ -726,22 +672,13 @@ public interface ScrumPackage extends EPackage {
 	int PROJECT__REFERENCES = PARTY__REFERENCES;
 
 	/**
-	 * The feature id for the '<em><b>Uses Products</b></em>' reference list.
+	 * The feature id for the '<em><b>Customer Of</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__USES_PRODUCTS = PARTY__USES_PRODUCTS;
-
-	/**
-	 * The feature id for the '<em><b>Uses Functionality</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__USES_FUNCTIONALITY = PARTY__USES_FUNCTIONALITY;
+	int PROJECT__CUSTOMER_OF = PARTY__CUSTOMER_OF;
 
 	/**
 	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
@@ -751,15 +688,6 @@ public interface ScrumPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROJECT__INTERACTIONS = PARTY__INTERACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Fundings</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__FUNDINGS = PARTY__FUNDINGS;
 
 	/**
 	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
@@ -844,22 +772,13 @@ public interface ScrumPackage extends EPackage {
 	int PERSON__REFERENCES = PARTY__REFERENCES;
 
 	/**
-	 * The feature id for the '<em><b>Uses Products</b></em>' reference list.
+	 * The feature id for the '<em><b>Customer Of</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__USES_PRODUCTS = PARTY__USES_PRODUCTS;
-
-	/**
-	 * The feature id for the '<em><b>Uses Functionality</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON__USES_FUNCTIONALITY = PARTY__USES_FUNCTIONALITY;
+	int PERSON__CUSTOMER_OF = PARTY__CUSTOMER_OF;
 
 	/**
 	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
@@ -869,15 +788,6 @@ public interface ScrumPackage extends EPackage {
 	 * @ordered
 	 */
 	int PERSON__INTERACTIONS = PARTY__INTERACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Fundings</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON__FUNDINGS = PARTY__FUNDINGS;
 
 	/**
 	 * The number of structural features of the '<em>Person</em>' class.
@@ -1035,22 +945,13 @@ public interface ScrumPackage extends EPackage {
 	int PARTY_REFERENCE__REFERENCES = PARTY__REFERENCES;
 
 	/**
-	 * The feature id for the '<em><b>Uses Products</b></em>' reference list.
+	 * The feature id for the '<em><b>Customer Of</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARTY_REFERENCE__USES_PRODUCTS = PARTY__USES_PRODUCTS;
-
-	/**
-	 * The feature id for the '<em><b>Uses Functionality</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTY_REFERENCE__USES_FUNCTIONALITY = PARTY__USES_FUNCTIONALITY;
+	int PARTY_REFERENCE__CUSTOMER_OF = PARTY__CUSTOMER_OF;
 
 	/**
 	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
@@ -1060,15 +961,6 @@ public interface ScrumPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARTY_REFERENCE__INTERACTIONS = PARTY__INTERACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Fundings</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTY_REFERENCE__FUNDINGS = PARTY__FUNDINGS;
 
 	/**
 	 * The feature id for the '<em><b>Party</b></em>' reference.
@@ -1134,7 +1026,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getComponent()
 	 * @generated
 	 */
-	int COMPONENT = 14;
+	int COMPONENT = 16;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.TargetGroupImpl <em>Target Group</em>}' class.
@@ -1144,7 +1036,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getTargetGroup()
 	 * @generated
 	 */
-	int TARGET_GROUP = 15;
+	int TARGET_GROUP = 17;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.NeedImpl <em>Need</em>}' class.
@@ -1154,7 +1046,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getNeed()
 	 * @generated
 	 */
-	int NEED = 16;
+	int NEED = 18;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.ProductCategoryImpl <em>Product Category</em>}' class.
@@ -1164,7 +1056,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getProductCategory()
 	 * @generated
 	 */
-	int PRODUCT_CATEGORY = 17;
+	int PRODUCT_CATEGORY = 19;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.FunctionalityImpl <em>Functionality</em>}' class.
@@ -1174,7 +1066,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getFunctionality()
 	 * @generated
 	 */
-	int FUNCTIONALITY = 20;
+	int FUNCTIONALITY = 22;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.EpicImpl <em>Epic</em>}' class.
@@ -1184,7 +1076,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getEpic()
 	 * @generated
 	 */
-	int EPIC = 21;
+	int EPIC = 23;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.FeatureImpl <em>Feature</em>}' class.
@@ -1194,7 +1086,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getFeature()
 	 * @generated
 	 */
-	int FEATURE = 22;
+	int FEATURE = 24;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.UserStoryImpl <em>User Story</em>}' class.
@@ -1204,7 +1096,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getUserStory()
 	 * @generated
 	 */
-	int USER_STORY = 23;
+	int USER_STORY = 25;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.TaskImpl <em>Task</em>}' class.
@@ -1214,7 +1106,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getTask()
 	 * @generated
 	 */
-	int TASK = 24;
+	int TASK = 26;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.ReleaseImpl <em>Release</em>}' class.
@@ -1224,7 +1116,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getRelease()
 	 * @generated
 	 */
-	int RELEASE = 25;
+	int RELEASE = 27;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.SprintImpl <em>Sprint</em>}' class.
@@ -1234,7 +1126,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getSprint()
 	 * @generated
 	 */
-	int SPRINT = 26;
+	int SPRINT = 28;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.ArtifactImpl <em>Artifact</em>}' class.
@@ -1244,7 +1136,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getArtifact()
 	 * @generated
 	 */
-	int ARTIFACT = 27;
+	int ARTIFACT = 29;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.ThemeImpl <em>Theme</em>}' class.
@@ -1254,7 +1146,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getTheme()
 	 * @generated
 	 */
-	int THEME = 18;
+	int THEME = 20;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.ProductUserImpl <em>Product User</em>}' class.
@@ -1264,7 +1156,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getProductUser()
 	 * @generated
 	 */
-	int PRODUCT_USER = 19;
+	int PRODUCT_USER = 21;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.InteractionImpl <em>Interaction</em>}' class.
@@ -1274,7 +1166,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getInteraction()
 	 * @generated
 	 */
-	int INTERACTION = 28;
+	int INTERACTION = 30;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.scrum.impl.ScrumTeamImpl <em>Team</em>}' class.
@@ -1323,22 +1215,13 @@ public interface ScrumPackage extends EPackage {
 	int SCRUM_TEAM__REFERENCES = ORGANIZATION__REFERENCES;
 
 	/**
-	 * The feature id for the '<em><b>Uses Products</b></em>' reference list.
+	 * The feature id for the '<em><b>Customer Of</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCRUM_TEAM__USES_PRODUCTS = ORGANIZATION__USES_PRODUCTS;
-
-	/**
-	 * The feature id for the '<em><b>Uses Functionality</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRUM_TEAM__USES_FUNCTIONALITY = ORGANIZATION__USES_FUNCTIONALITY;
+	int SCRUM_TEAM__CUSTOMER_OF = ORGANIZATION__CUSTOMER_OF;
 
 	/**
 	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
@@ -1348,15 +1231,6 @@ public interface ScrumPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCRUM_TEAM__INTERACTIONS = ORGANIZATION__INTERACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Fundings</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRUM_TEAM__FUNDINGS = ORGANIZATION__FUNDINGS;
 
 	/**
 	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
@@ -1422,13 +1296,22 @@ public interface ScrumPackage extends EPackage {
 	int SCRUM_TEAM__RELEASES = ORGANIZATION_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Customers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRUM_TEAM__CUSTOMERS = ORGANIZATION_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Team</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCRUM_TEAM_FEATURE_COUNT = ORGANIZATION_FEATURE_COUNT + 6;
+	int SCRUM_TEAM_FEATURE_COUNT = ORGANIZATION_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Validate</em>' operation.
@@ -1630,13 +1513,31 @@ public interface ScrumPackage extends EPackage {
 	int PRODUCT__DEVELOPMENT_TEAM = ABSTRACT_PRODUCT__DEVELOPMENT_TEAM;
 
 	/**
+	 * The feature id for the '<em><b>Customers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__CUSTOMERS = ABSTRACT_PRODUCT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Requests</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__REQUESTS = ABSTRACT_PRODUCT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__CAPABILITIES = ABSTRACT_PRODUCT_FEATURE_COUNT + 0;
+	int PRODUCT__CAPABILITIES = ABSTRACT_PRODUCT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Themes</b></em>' containment reference list.
@@ -1645,7 +1546,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__THEMES = ABSTRACT_PRODUCT_FEATURE_COUNT + 1;
+	int PRODUCT__THEMES = ABSTRACT_PRODUCT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Product Users</b></em>' containment reference list.
@@ -1654,16 +1555,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__PRODUCT_USERS = ABSTRACT_PRODUCT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Customers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCT__CUSTOMERS = ABSTRACT_PRODUCT_FEATURE_COUNT + 3;
+	int PRODUCT__PRODUCT_USERS = ABSTRACT_PRODUCT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Target Groups</b></em>' containment reference list.
@@ -1672,7 +1564,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__TARGET_GROUPS = ABSTRACT_PRODUCT_FEATURE_COUNT + 4;
+	int PRODUCT__TARGET_GROUPS = ABSTRACT_PRODUCT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -1681,7 +1573,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__COMPONENTS = ABSTRACT_PRODUCT_FEATURE_COUNT + 5;
+	int PRODUCT__COMPONENTS = ABSTRACT_PRODUCT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
@@ -1690,7 +1582,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__INTERACTIONS = ABSTRACT_PRODUCT_FEATURE_COUNT + 6;
+	int PRODUCT__INTERACTIONS = ABSTRACT_PRODUCT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Product</em>' class.
@@ -1699,7 +1591,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_FEATURE_COUNT = ABSTRACT_PRODUCT_FEATURE_COUNT + 7;
+	int PRODUCT_FEATURE_COUNT = ABSTRACT_PRODUCT_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Validate</em>' operation.
@@ -1718,6 +1610,233 @@ public interface ScrumPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRODUCT_OPERATION_COUNT = ABSTRACT_PRODUCT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.scrum.impl.CustomerImpl <em>Customer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.scrum.impl.CustomerImpl
+	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getCustomer()
+	 * @generated
+	 */
+	int CUSTOMER = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__NAME = MODEL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__NOTES = MODEL_ELEMENT__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Parties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__PARTIES = MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Requests</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__REQUESTS = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Fundings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__FUNDINGS = MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Uses Products</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__USES_PRODUCTS = MODEL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Uses Functionality</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__USES_FUNCTIONALITY = MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__INTERACTIONS = MODEL_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Customer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Validate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER___VALIDATE__DIAGNOSTICCHAIN_MAP = MODEL_ELEMENT___VALIDATE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The number of operations of the '<em>Customer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.scrum.impl.RequestImpl <em>Request</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.scrum.impl.RequestImpl
+	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getRequest()
+	 * @generated
+	 */
+	int REQUEST = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__NAME = MODEL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__NOTES = MODEL_ELEMENT__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__DATE = MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__CHILDREN = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Fulfilled By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__FULFILLED_BY = MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Related Products</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__RELATED_PRODUCTS = MODEL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__INTERACTIONS = MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Validate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST___VALIDATE__DIAGNOSTICCHAIN_MAP = MODEL_ELEMENT___VALIDATE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The number of operations of the '<em>Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2179,13 +2298,22 @@ public interface ScrumPackage extends EPackage {
 	int FUNCTIONALITY__SATISFIES = MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Fulfills</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTIONALITY__FULFILLS = MODEL_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The feature id for the '<em><b>Dependencies</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONALITY__DEPENDENCIES = MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int FUNCTIONALITY__DEPENDENCIES = MODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Dependants</b></em>' reference list.
@@ -2194,7 +2322,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONALITY__DEPENDANTS = MODEL_ELEMENT_FEATURE_COUNT + 6;
+	int FUNCTIONALITY__DEPENDANTS = MODEL_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
@@ -2203,7 +2331,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONALITY__INTERACTIONS = MODEL_ELEMENT_FEATURE_COUNT + 7;
+	int FUNCTIONALITY__INTERACTIONS = MODEL_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Assigned To</b></em>' reference list.
@@ -2212,7 +2340,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONALITY__ASSIGNED_TO = MODEL_ELEMENT_FEATURE_COUNT + 8;
+	int FUNCTIONALITY__ASSIGNED_TO = MODEL_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Functionality</em>' class.
@@ -2221,7 +2349,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONALITY_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 9;
+	int FUNCTIONALITY_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Validate</em>' operation.
@@ -2312,6 +2440,15 @@ public interface ScrumPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPIC__SATISFIES = FUNCTIONALITY__SATISFIES;
+
+	/**
+	 * The feature id for the '<em><b>Fulfills</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPIC__FULFILLS = FUNCTIONALITY__FULFILLS;
 
 	/**
 	 * The feature id for the '<em><b>Dependencies</b></em>' reference list.
@@ -2467,6 +2604,15 @@ public interface ScrumPackage extends EPackage {
 	int FEATURE__SATISFIES = FUNCTIONALITY__SATISFIES;
 
 	/**
+	 * The feature id for the '<em><b>Fulfills</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__FULFILLS = FUNCTIONALITY__FULFILLS;
+
+	/**
 	 * The feature id for the '<em><b>Dependencies</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2618,6 +2764,15 @@ public interface ScrumPackage extends EPackage {
 	 * @ordered
 	 */
 	int USER_STORY__SATISFIES = FUNCTIONALITY__SATISFIES;
+
+	/**
+	 * The feature id for the '<em><b>Fulfills</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_STORY__FULFILLS = FUNCTIONALITY__FULFILLS;
 
 	/**
 	 * The feature id for the '<em><b>Dependencies</b></em>' reference list.
@@ -3025,13 +3180,31 @@ public interface ScrumPackage extends EPackage {
 	int INTERACTION__DATE = MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Customers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION__CUSTOMERS = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Requests</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION__REQUESTS = MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Products</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__PRODUCTS = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int INTERACTION__PRODUCTS = MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Functionality</b></em>' reference list.
@@ -3040,7 +3213,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__FUNCTIONALITY = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int INTERACTION__FUNCTIONALITY = MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Participant</b></em>' reference list.
@@ -3049,7 +3222,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__PARTICIPANT = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int INTERACTION__PARTICIPANT = MODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -3058,7 +3231,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__CHILDREN = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int INTERACTION__CHILDREN = MODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Interaction</em>' class.
@@ -3067,7 +3240,7 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int INTERACTION_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Validate</em>' operation.
@@ -3095,7 +3268,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getFunding()
 	 * @generated
 	 */
-	int FUNDING = 29;
+	int FUNDING = 31;
 
 	/**
 	 * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -3151,7 +3324,7 @@ public interface ScrumPackage extends EPackage {
 	 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getFunctionalityState()
 	 * @generated
 	 */
-	int FUNCTIONALITY_STATE = 30;
+	int FUNCTIONALITY_STATE = 32;
 
 
 	/**
@@ -3282,26 +3455,15 @@ public interface ScrumPackage extends EPackage {
 	EReference getParty_References();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Party#getUsesProducts <em>Uses Products</em>}'.
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Party#getCustomerOf <em>Customer Of</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Uses Products</em>'.
-	 * @see org.nasdanika.scrum.Party#getUsesProducts()
+	 * @return the meta object for the reference list '<em>Customer Of</em>'.
+	 * @see org.nasdanika.scrum.Party#getCustomerOf()
 	 * @see #getParty()
 	 * @generated
 	 */
-	EReference getParty_UsesProducts();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Party#getUsesFunctionality <em>Uses Functionality</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Uses Functionality</em>'.
-	 * @see org.nasdanika.scrum.Party#getUsesFunctionality()
-	 * @see #getParty()
-	 * @generated
-	 */
-	EReference getParty_UsesFunctionality();
+	EReference getParty_CustomerOf();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Party#getInteractions <em>Interactions</em>}'.
@@ -3313,17 +3475,6 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getParty_Interactions();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Party#getFundings <em>Fundings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Fundings</em>'.
-	 * @see org.nasdanika.scrum.Party#getFundings()
-	 * @see #getParty()
-	 * @generated
-	 */
-	EReference getParty_Fundings();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.scrum.PartyCategory <em>Party Category</em>}'.
@@ -3483,6 +3634,17 @@ public interface ScrumPackage extends EPackage {
 	EClass getProduct();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Product#getCustomers <em>Customers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Customers</em>'.
+	 * @see org.nasdanika.scrum.Product#getCustomers()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EReference getProduct_Customers();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.nasdanika.scrum.Product#getCapabilities <em>Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3516,17 +3678,6 @@ public interface ScrumPackage extends EPackage {
 	EReference getProduct_ProductUsers();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Product#getCustomers <em>Customers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Customers</em>'.
-	 * @see org.nasdanika.scrum.Product#getCustomers()
-	 * @see #getProduct()
-	 * @generated
-	 */
-	EReference getProduct_Customers();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link org.nasdanika.scrum.Product#getTargetGroups <em>Target Groups</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3558,6 +3709,158 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProduct_Interactions();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Product#getRequests <em>Requests</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Requests</em>'.
+	 * @see org.nasdanika.scrum.Product#getRequests()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EReference getProduct_Requests();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.scrum.Customer <em>Customer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Customer</em>'.
+	 * @see org.nasdanika.scrum.Customer
+	 * @generated
+	 */
+	EClass getCustomer();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Customer#getParties <em>Parties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Parties</em>'.
+	 * @see org.nasdanika.scrum.Customer#getParties()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EReference getCustomer_Parties();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.scrum.Customer#getRequests <em>Requests</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Requests</em>'.
+	 * @see org.nasdanika.scrum.Customer#getRequests()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EReference getCustomer_Requests();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Customer#getFundings <em>Fundings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Fundings</em>'.
+	 * @see org.nasdanika.scrum.Customer#getFundings()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EReference getCustomer_Fundings();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Customer#getUsesProducts <em>Uses Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Uses Products</em>'.
+	 * @see org.nasdanika.scrum.Customer#getUsesProducts()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EReference getCustomer_UsesProducts();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Customer#getUsesFunctionality <em>Uses Functionality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Uses Functionality</em>'.
+	 * @see org.nasdanika.scrum.Customer#getUsesFunctionality()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EReference getCustomer_UsesFunctionality();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Customer#getInteractions <em>Interactions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interactions</em>'.
+	 * @see org.nasdanika.scrum.Customer#getInteractions()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EReference getCustomer_Interactions();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.scrum.Request <em>Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Request</em>'.
+	 * @see org.nasdanika.scrum.Request
+	 * @generated
+	 */
+	EClass getRequest();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.scrum.Request#getDate <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date</em>'.
+	 * @see org.nasdanika.scrum.Request#getDate()
+	 * @see #getRequest()
+	 * @generated
+	 */
+	EAttribute getRequest_Date();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.scrum.Request#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see org.nasdanika.scrum.Request#getChildren()
+	 * @see #getRequest()
+	 * @generated
+	 */
+	EReference getRequest_Children();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Request#getFulfilledBy <em>Fulfilled By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Fulfilled By</em>'.
+	 * @see org.nasdanika.scrum.Request#getFulfilledBy()
+	 * @see #getRequest()
+	 * @generated
+	 */
+	EReference getRequest_FulfilledBy();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Request#getRelatedProducts <em>Related Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Related Products</em>'.
+	 * @see org.nasdanika.scrum.Request#getRelatedProducts()
+	 * @see #getRequest()
+	 * @generated
+	 */
+	EReference getRequest_RelatedProducts();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Request#getInteractions <em>Interactions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interactions</em>'.
+	 * @see org.nasdanika.scrum.Request#getInteractions()
+	 * @see #getRequest()
+	 * @generated
+	 */
+	EReference getRequest_Interactions();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.scrum.Component <em>Component</em>}'.
@@ -3707,6 +4010,17 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFunctionality_Satisfies();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Functionality#getFulfills <em>Fulfills</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Fulfills</em>'.
+	 * @see org.nasdanika.scrum.Functionality#getFulfills()
+	 * @see #getFunctionality()
+	 * @generated
+	 */
+	EReference getFunctionality_Fulfills();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Functionality#getDependencies <em>Dependencies</em>}'.
@@ -4040,6 +4354,28 @@ public interface ScrumPackage extends EPackage {
 	EAttribute getInteraction_Date();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Interaction#getCustomers <em>Customers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Customers</em>'.
+	 * @see org.nasdanika.scrum.Interaction#getCustomers()
+	 * @see #getInteraction()
+	 * @generated
+	 */
+	EReference getInteraction_Customers();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Interaction#getRequests <em>Requests</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Requests</em>'.
+	 * @see org.nasdanika.scrum.Interaction#getRequests()
+	 * @see #getInteraction()
+	 * @generated
+	 */
+	EReference getInteraction_Requests();
+
+	/**
 	 * Returns the meta object for the reference list '{@link org.nasdanika.scrum.Interaction#getProducts <em>Products</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4158,6 +4494,17 @@ public interface ScrumPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getScrumTeam_Releases();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.scrum.ScrumTeam#getCustomers <em>Customers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Customers</em>'.
+	 * @see org.nasdanika.scrum.ScrumTeam#getCustomers()
+	 * @see #getScrumTeam()
+	 * @generated
+	 */
+	EReference getScrumTeam_Customers();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.scrum.DevelopmentTeam <em>Development Team</em>}'.
@@ -4372,20 +4719,12 @@ public interface ScrumPackage extends EPackage {
 		EReference PARTY__REFERENCES = eINSTANCE.getParty_References();
 
 		/**
-		 * The meta object literal for the '<em><b>Uses Products</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Customer Of</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARTY__USES_PRODUCTS = eINSTANCE.getParty_UsesProducts();
-
-		/**
-		 * The meta object literal for the '<em><b>Uses Functionality</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PARTY__USES_FUNCTIONALITY = eINSTANCE.getParty_UsesFunctionality();
+		EReference PARTY__CUSTOMER_OF = eINSTANCE.getParty_CustomerOf();
 
 		/**
 		 * The meta object literal for the '<em><b>Interactions</b></em>' reference list feature.
@@ -4394,14 +4733,6 @@ public interface ScrumPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PARTY__INTERACTIONS = eINSTANCE.getParty_Interactions();
-
-		/**
-		 * The meta object literal for the '<em><b>Fundings</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PARTY__FUNDINGS = eINSTANCE.getParty_Fundings();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.scrum.impl.PartyCategoryImpl <em>Party Category</em>}' class.
@@ -4540,6 +4871,14 @@ public interface ScrumPackage extends EPackage {
 		EClass PRODUCT = eINSTANCE.getProduct();
 
 		/**
+		 * The meta object literal for the '<em><b>Customers</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT__CUSTOMERS = eINSTANCE.getProduct_Customers();
+
+		/**
 		 * The meta object literal for the '<em><b>Capabilities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4564,14 +4903,6 @@ public interface ScrumPackage extends EPackage {
 		EReference PRODUCT__PRODUCT_USERS = eINSTANCE.getProduct_ProductUsers();
 
 		/**
-		 * The meta object literal for the '<em><b>Customers</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRODUCT__CUSTOMERS = eINSTANCE.getProduct_Customers();
-
-		/**
 		 * The meta object literal for the '<em><b>Target Groups</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4594,6 +4925,122 @@ public interface ScrumPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PRODUCT__INTERACTIONS = eINSTANCE.getProduct_Interactions();
+
+		/**
+		 * The meta object literal for the '<em><b>Requests</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT__REQUESTS = eINSTANCE.getProduct_Requests();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.scrum.impl.CustomerImpl <em>Customer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.scrum.impl.CustomerImpl
+		 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getCustomer()
+		 * @generated
+		 */
+		EClass CUSTOMER = eINSTANCE.getCustomer();
+
+		/**
+		 * The meta object literal for the '<em><b>Parties</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER__PARTIES = eINSTANCE.getCustomer_Parties();
+
+		/**
+		 * The meta object literal for the '<em><b>Requests</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER__REQUESTS = eINSTANCE.getCustomer_Requests();
+
+		/**
+		 * The meta object literal for the '<em><b>Fundings</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER__FUNDINGS = eINSTANCE.getCustomer_Fundings();
+
+		/**
+		 * The meta object literal for the '<em><b>Uses Products</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER__USES_PRODUCTS = eINSTANCE.getCustomer_UsesProducts();
+
+		/**
+		 * The meta object literal for the '<em><b>Uses Functionality</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER__USES_FUNCTIONALITY = eINSTANCE.getCustomer_UsesFunctionality();
+
+		/**
+		 * The meta object literal for the '<em><b>Interactions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER__INTERACTIONS = eINSTANCE.getCustomer_Interactions();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.scrum.impl.RequestImpl <em>Request</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.scrum.impl.RequestImpl
+		 * @see org.nasdanika.scrum.impl.ScrumPackageImpl#getRequest()
+		 * @generated
+		 */
+		EClass REQUEST = eINSTANCE.getRequest();
+
+		/**
+		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUEST__DATE = eINSTANCE.getRequest_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUEST__CHILDREN = eINSTANCE.getRequest_Children();
+
+		/**
+		 * The meta object literal for the '<em><b>Fulfilled By</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUEST__FULFILLED_BY = eINSTANCE.getRequest_FulfilledBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Related Products</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUEST__RELATED_PRODUCTS = eINSTANCE.getRequest_RelatedProducts();
+
+		/**
+		 * The meta object literal for the '<em><b>Interactions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUEST__INTERACTIONS = eINSTANCE.getRequest_Interactions();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.scrum.impl.ComponentImpl <em>Component</em>}' class.
@@ -4716,6 +5163,14 @@ public interface ScrumPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FUNCTIONALITY__SATISFIES = eINSTANCE.getFunctionality_Satisfies();
+
+		/**
+		 * The meta object literal for the '<em><b>Fulfills</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTIONALITY__FULFILLS = eINSTANCE.getFunctionality_Fulfills();
 
 		/**
 		 * The meta object literal for the '<em><b>Dependencies</b></em>' reference list feature.
@@ -4986,6 +5441,22 @@ public interface ScrumPackage extends EPackage {
 		EAttribute INTERACTION__DATE = eINSTANCE.getInteraction_Date();
 
 		/**
+		 * The meta object literal for the '<em><b>Customers</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERACTION__CUSTOMERS = eINSTANCE.getInteraction_Customers();
+
+		/**
+		 * The meta object literal for the '<em><b>Requests</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERACTION__REQUESTS = eINSTANCE.getInteraction_Requests();
+
+		/**
 		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5074,6 +5545,14 @@ public interface ScrumPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCRUM_TEAM__RELEASES = eINSTANCE.getScrumTeam_Releases();
+
+		/**
+		 * The meta object literal for the '<em><b>Customers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCRUM_TEAM__CUSTOMERS = eINSTANCE.getScrumTeam_Customers();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.scrum.impl.DevelopmentTeamImpl <em>Development Team</em>}' class.

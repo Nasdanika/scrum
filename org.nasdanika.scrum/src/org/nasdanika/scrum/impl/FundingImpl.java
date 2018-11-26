@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
+import org.nasdanika.scrum.Customer;
 import org.nasdanika.scrum.Funding;
-import org.nasdanika.scrum.Party;
 import org.nasdanika.scrum.ScrumPackage;
 
 /**
@@ -101,8 +101,8 @@ public class FundingImpl extends CDOObjectImpl implements Funding {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Party> getCustomers() {
-		return (EList<Party>)eGet(ScrumPackage.Literals.FUNDING__CUSTOMERS, true);
+	public EList<Customer> getCustomers() {
+		return (EList<Customer>)eGet(ScrumPackage.Literals.FUNDING__CUSTOMERS, true);
 	}
 
 } //FundingImpl

@@ -6,13 +6,14 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.nasdanika.scrum.Customer;
 import org.nasdanika.scrum.Functionality;
 import org.nasdanika.scrum.Funding;
 import org.nasdanika.scrum.Interaction;
 import org.nasdanika.scrum.Member;
 import org.nasdanika.scrum.Need;
-import org.nasdanika.scrum.Party;
 import org.nasdanika.scrum.ProductUser;
+import org.nasdanika.scrum.Request;
 import org.nasdanika.scrum.ScrumPackage;
 import org.nasdanika.scrum.Theme;
 
@@ -29,6 +30,7 @@ import org.nasdanika.scrum.Theme;
  *   <li>{@link org.nasdanika.scrum.impl.FunctionalityImpl#getCustomers <em>Customers</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.FunctionalityImpl#getFundings <em>Fundings</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.FunctionalityImpl#getSatisfies <em>Satisfies</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.FunctionalityImpl#getFulfills <em>Fulfills</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.FunctionalityImpl#getDependencies <em>Dependencies</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.FunctionalityImpl#getDependants <em>Dependants</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.FunctionalityImpl#getInteractions <em>Interactions</em>}</li>
@@ -83,8 +85,8 @@ public abstract class FunctionalityImpl extends ModelElementImpl implements Func
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Party> getCustomers() {
-		return (EList<Party>)eGet(ScrumPackage.Literals.FUNCTIONALITY__CUSTOMERS, true);
+	public EList<Customer> getCustomers() {
+		return (EList<Customer>)eGet(ScrumPackage.Literals.FUNCTIONALITY__CUSTOMERS, true);
 	}
 
 	/**
@@ -105,6 +107,16 @@ public abstract class FunctionalityImpl extends ModelElementImpl implements Func
 	@SuppressWarnings("unchecked")
 	public EList<Need> getSatisfies() {
 		return (EList<Need>)eGet(ScrumPackage.Literals.FUNCTIONALITY__SATISFIES, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Request> getFulfills() {
+		return (EList<Request>)eGet(ScrumPackage.Literals.FUNCTIONALITY__FULFILLS, true);
 	}
 
 	/**

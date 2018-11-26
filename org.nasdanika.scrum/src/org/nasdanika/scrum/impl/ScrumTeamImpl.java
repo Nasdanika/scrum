@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.scrum.AbstractProduct;
+import org.nasdanika.scrum.Customer;
 import org.nasdanika.scrum.DevelopmentTeam;
 import org.nasdanika.scrum.Interaction;
 import org.nasdanika.scrum.Person;
@@ -28,6 +29,7 @@ import org.nasdanika.scrum.ScrumTeam;
  *   <li>{@link org.nasdanika.scrum.impl.ScrumTeamImpl#getProducts <em>Products</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ScrumTeamImpl#getTeamInteractions <em>Team Interactions</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ScrumTeamImpl#getReleases <em>Releases</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.ScrumTeamImpl#getCustomers <em>Customers</em>}</li>
  * </ul>
  *
  * @generated
@@ -126,6 +128,16 @@ public class ScrumTeamImpl extends OrganizationImpl implements ScrumTeam {
 	@SuppressWarnings("unchecked")
 	public EList<Release> getReleases() {
 		return (EList<Release>)eGet(ScrumPackage.Literals.SCRUM_TEAM__RELEASES, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Customer> getCustomers() {
+		return (EList<Customer>)eGet(ScrumPackage.Literals.SCRUM_TEAM__CUSTOMERS, true);
 	}
 
 } //ScrumTeamImpl

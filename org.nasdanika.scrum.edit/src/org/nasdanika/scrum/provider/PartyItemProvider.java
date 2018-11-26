@@ -44,10 +44,8 @@ public class PartyItemProvider extends ModelElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addReferencesPropertyDescriptor(object);
-			addUsesProductsPropertyDescriptor(object);
-			addUsesFunctionalityPropertyDescriptor(object);
+			addCustomerOfPropertyDescriptor(object);
 			addInteractionsPropertyDescriptor(object);
-			addFundingsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -75,41 +73,19 @@ public class PartyItemProvider extends ModelElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Uses Products feature.
+	 * This adds a property descriptor for the Customer Of feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUsesProductsPropertyDescriptor(Object object) {
+	protected void addCustomerOfPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Party_usesProducts_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Party_usesProducts_feature", "_UI_Party_type"),
-				 ScrumPackage.Literals.PARTY__USES_PRODUCTS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Uses Functionality feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsesFunctionalityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Party_usesFunctionality_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Party_usesFunctionality_feature", "_UI_Party_type"),
-				 ScrumPackage.Literals.PARTY__USES_FUNCTIONALITY,
+				 getString("_UI_Party_customerOf_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Party_customerOf_feature", "_UI_Party_type"),
+				 ScrumPackage.Literals.PARTY__CUSTOMER_OF,
 				 true,
 				 false,
 				 true,
@@ -132,28 +108,6 @@ public class PartyItemProvider extends ModelElementItemProvider {
 				 getString("_UI_Party_interactions_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Party_interactions_feature", "_UI_Party_type"),
 				 ScrumPackage.Literals.PARTY__INTERACTIONS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Fundings feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFundingsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Party_fundings_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Party_fundings_feature", "_UI_Party_type"),
-				 ScrumPackage.Literals.PARTY__FUNDINGS,
 				 true,
 				 false,
 				 true,

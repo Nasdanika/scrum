@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.nasdanika.scrum.ScrumTeam#getProducts <em>Products</em>}</li>
  *   <li>{@link org.nasdanika.scrum.ScrumTeam#getTeamInteractions <em>Team Interactions</em>}</li>
  *   <li>{@link org.nasdanika.scrum.ScrumTeam#getReleases <em>Releases</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.ScrumTeam#getCustomers <em>Customers</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.scrum.ScrumPackage#getScrumTeam()
@@ -141,5 +142,21 @@ public interface ScrumTeam extends Organization {
 	 * @generated
 	 */
 	EList<Release> getReleases();
+
+	/**
+	 * Returns the value of the '<em><b>Customers</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Customer}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customers</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Customers</em>' containment reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getScrumTeam_Customers()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Customer> getCustomers();
 
 } // ScrumTeam

@@ -15,10 +15,8 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.scrum.Party#getReferences <em>References</em>}</li>
- *   <li>{@link org.nasdanika.scrum.Party#getUsesProducts <em>Uses Products</em>}</li>
- *   <li>{@link org.nasdanika.scrum.Party#getUsesFunctionality <em>Uses Functionality</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Party#getCustomerOf <em>Customer Of</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Party#getInteractions <em>Interactions</em>}</li>
- *   <li>{@link org.nasdanika.scrum.Party#getFundings <em>Fundings</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.scrum.ScrumPackage#getParty()
@@ -46,40 +44,22 @@ public interface Party extends ModelElement {
 	EList<PartyReference> getReferences();
 
 	/**
-	 * Returns the value of the '<em><b>Uses Products</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.scrum.Product}.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Product#getCustomers <em>Customers</em>}'.
+	 * Returns the value of the '<em><b>Customer Of</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Customer}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Customer#getParties <em>Parties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Uses Products</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Customer Of</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uses Products</em>' reference list.
-	 * @see org.nasdanika.scrum.ScrumPackage#getParty_UsesProducts()
-	 * @see org.nasdanika.scrum.Product#getCustomers
-	 * @model opposite="customers"
+	 * @return the value of the '<em>Customer Of</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getParty_CustomerOf()
+	 * @see org.nasdanika.scrum.Customer#getParties
+	 * @model opposite="parties"
 	 * @generated
 	 */
-	EList<Product> getUsesProducts();
-
-	/**
-	 * Returns the value of the '<em><b>Uses Functionality</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.scrum.Functionality}.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Functionality#getCustomers <em>Customers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Uses Functionality</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uses Functionality</em>' reference list.
-	 * @see org.nasdanika.scrum.ScrumPackage#getParty_UsesFunctionality()
-	 * @see org.nasdanika.scrum.Functionality#getCustomers
-	 * @model opposite="customers"
-	 * @generated
-	 */
-	EList<Functionality> getUsesFunctionality();
+	EList<Customer> getCustomerOf();
 
 	/**
 	 * Returns the value of the '<em><b>Interactions</b></em>' reference list.
@@ -98,22 +78,4 @@ public interface Party extends ModelElement {
 	 * @generated
 	 */
 	EList<Interaction> getInteractions();
-
-	/**
-	 * Returns the value of the '<em><b>Fundings</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.scrum.Funding}.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Funding#getCustomers <em>Customers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Fundings</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fundings</em>' reference list.
-	 * @see org.nasdanika.scrum.ScrumPackage#getParty_Fundings()
-	 * @see org.nasdanika.scrum.Funding#getCustomers
-	 * @model opposite="customers"
-	 * @generated
-	 */
-	EList<Funding> getFundings();
 } // Party

@@ -32,6 +32,15 @@
             class="org.nasdanika.scrum.presentation.ScrumEditor"
             contributorClass="org.nasdanika.scrum.presentation.ScrumActionBarContributor">
       </editor>
-   </extension>
+      
+      <editor 
+      	class="org.eclipse.emfforms.spi.editor.GenericEditor" 
+      	default="false" 
+      	extensions="nsd_scrum"
+      	 icon="icons/full/obj16/ScrumModelFile.gif" 
+      	 id="org.nasdanika.scrum.presentation.ScrumEMFFormsGenericEditorID" 
+      	 name="Nasdanika Scrum Model EMF Forms Based Editor">
+      </editor>
+   </extension>  
 
 </plugin>

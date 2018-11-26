@@ -175,6 +175,20 @@ public class ScrumSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ScrumPackage.CUSTOMER: {
+				Customer customer = (Customer)theEObject;
+				T result = caseCustomer(customer);
+				if (result == null) result = caseModelElement(customer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ScrumPackage.REQUEST: {
+				Request request = (Request)theEObject;
+				T result = caseRequest(request);
+				if (result == null) result = caseModelElement(request);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ScrumPackage.COMPONENT: {
 				Component component = (Component)theEObject;
 				T result = caseComponent(component);
@@ -471,6 +485,36 @@ public class ScrumSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProduct(Product object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Customer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Customer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomer(Customer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Request</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequest(Request object) {
 		return null;
 	}
 

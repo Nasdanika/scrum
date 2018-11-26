@@ -122,6 +122,10 @@ public class ScrumValidator extends EObjectValidator {
 				return validateAbstractProduct((AbstractProduct)value, diagnostics, context);
 			case ScrumPackage.PRODUCT:
 				return validateProduct((Product)value, diagnostics, context);
+			case ScrumPackage.CUSTOMER:
+				return validateCustomer((Customer)value, diagnostics, context);
+			case ScrumPackage.REQUEST:
+				return validateRequest((Request)value, diagnostics, context);
 			case ScrumPackage.COMPONENT:
 				return validateComponent((Component)value, diagnostics, context);
 			case ScrumPackage.TARGET_GROUP:
@@ -386,6 +390,44 @@ public class ScrumValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)product, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)product, diagnostics, context);
 		if (result || diagnostics != null) result &= validateModelElement_validate(product, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCustomer(Customer customer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject)customer, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)customer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)customer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)customer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)customer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)customer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)customer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)customer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)customer, diagnostics, context);
+		if (result || diagnostics != null) result &= validateModelElement_validate(customer, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRequest(Request request, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject)request, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)request, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)request, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)request, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)request, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)request, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)request, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)request, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)request, diagnostics, context);
+		if (result || diagnostics != null) result &= validateModelElement_validate(request, diagnostics, context);
 		return result;
 	}
 

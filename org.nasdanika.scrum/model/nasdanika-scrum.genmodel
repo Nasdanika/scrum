@@ -36,10 +36,8 @@
     </genClasses>
     <genClasses ecoreClass="nasdanika-scrum.ecore#//Party">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Party/references"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Party/usesProducts"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Party/usesFunctionality"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Party/customerOf"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Party/interactions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Party/fundings"/>
     </genClasses>
     <genClasses ecoreClass="nasdanika-scrum.ecore#//PartyCategory">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//PartyCategory/children"/>
@@ -65,6 +63,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//ScrumTeam/products"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//ScrumTeam/teamInteractions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//ScrumTeam/releases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//ScrumTeam/customers"/>
     </genClasses>
     <genClasses ecoreClass="nasdanika-scrum.ecore#//DevelopmentTeam">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//DevelopmentTeam/members"/>
@@ -74,13 +73,29 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//AbstractProduct/developmentTeam"/>
     </genClasses>
     <genClasses ecoreClass="nasdanika-scrum.ecore#//Product">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Product/customers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Product/requests"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Product/capabilities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Product/themes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Product/productUsers"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Product/customers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Product/targetGroups"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Product/components"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Product/interactions"/>
+    </genClasses>
+    <genClasses ecoreClass="nasdanika-scrum.ecore#//Customer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Customer/parties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Customer/requests"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Customer/fundings"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Customer/usesProducts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Customer/usesFunctionality"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Customer/interactions"/>
+    </genClasses>
+    <genClasses ecoreClass="nasdanika-scrum.ecore#//Request">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nasdanika-scrum.ecore#//Request/date"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Request/children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Request/fulfilledBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Request/relatedProducts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Request/interactions"/>
     </genClasses>
     <genClasses ecoreClass="nasdanika-scrum.ecore#//Component">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Component/owners"/>
@@ -106,6 +121,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Functionality/customers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Functionality/fundings"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Functionality/satisfies"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Functionality/fulfills"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Functionality/dependencies"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Functionality/dependants"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Functionality/interactions"/>
@@ -141,6 +157,8 @@
     </genClasses>
     <genClasses ecoreClass="nasdanika-scrum.ecore#//Interaction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nasdanika-scrum.ecore#//Interaction/date"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Interaction/customers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Interaction/requests"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Interaction/products"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Interaction/functionality"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nasdanika-scrum.ecore#//Interaction/participant"/>

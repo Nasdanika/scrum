@@ -15,24 +15,24 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.nasdanika.scrum.Product;
+import org.nasdanika.scrum.Customer;
 import org.nasdanika.scrum.ScrumFactory;
 import org.nasdanika.scrum.ScrumPackage;
 
 /**
- * This is the item provider adapter for a {@link org.nasdanika.scrum.Product} object.
+ * This is the item provider adapter for a {@link org.nasdanika.scrum.Customer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ProductItemProvider extends AbstractProductItemProvider {
+public class CustomerItemProvider extends ModelElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProductItemProvider(AdapterFactory adapterFactory) {
+	public CustomerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -47,27 +47,95 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addCustomersPropertyDescriptor(object);
-			addRequestsPropertyDescriptor(object);
+			addPartiesPropertyDescriptor(object);
+			addFundingsPropertyDescriptor(object);
+			addUsesProductsPropertyDescriptor(object);
+			addUsesFunctionalityPropertyDescriptor(object);
 			addInteractionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Customers feature.
+	 * This adds a property descriptor for the Parties feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCustomersPropertyDescriptor(Object object) {
+	protected void addPartiesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Product_customers_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Product_customers_feature", "_UI_Product_type"),
-				 ScrumPackage.Literals.PRODUCT__CUSTOMERS,
+				 getString("_UI_Customer_parties_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Customer_parties_feature", "_UI_Customer_type"),
+				 ScrumPackage.Literals.CUSTOMER__PARTIES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Fundings feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFundingsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Customer_fundings_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Customer_fundings_feature", "_UI_Customer_type"),
+				 ScrumPackage.Literals.CUSTOMER__FUNDINGS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Uses Products feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUsesProductsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Customer_usesProducts_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Customer_usesProducts_feature", "_UI_Customer_type"),
+				 ScrumPackage.Literals.CUSTOMER__USES_PRODUCTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Uses Functionality feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUsesFunctionalityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Customer_usesFunctionality_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Customer_usesFunctionality_feature", "_UI_Customer_type"),
+				 ScrumPackage.Literals.CUSTOMER__USES_FUNCTIONALITY,
 				 true,
 				 false,
 				 true,
@@ -87,31 +155,9 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Product_interactions_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Product_interactions_feature", "_UI_Product_type"),
-				 ScrumPackage.Literals.PRODUCT__INTERACTIONS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Requests feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequestsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Product_requests_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Product_requests_feature", "_UI_Product_type"),
-				 ScrumPackage.Literals.PRODUCT__REQUESTS,
+				 getString("_UI_Customer_interactions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Customer_interactions_feature", "_UI_Customer_type"),
+				 ScrumPackage.Literals.CUSTOMER__INTERACTIONS,
 				 true,
 				 false,
 				 true,
@@ -132,11 +178,7 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__CAPABILITIES);
-			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__THEMES);
-			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__PRODUCT_USERS);
-			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__TARGET_GROUPS);
-			childrenFeatures.add(ScrumPackage.Literals.PRODUCT__COMPONENTS);
+			childrenFeatures.add(ScrumPackage.Literals.CUSTOMER__REQUESTS);
 		}
 		return childrenFeatures;
 	}
@@ -155,14 +197,14 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 	}
 
 	/**
-	 * This returns Product.gif.
+	 * This returns Customer.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Product"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Customer"));
 	}
 
 	/**
@@ -173,10 +215,10 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Product)object).getName();
+		String label = ((Customer)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Product_type") :
-			getString("_UI_Product_type") + " " + label;
+			getString("_UI_Customer_type") :
+			getString("_UI_Customer_type") + " " + label;
 	}
 	
 
@@ -191,12 +233,8 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Product.class)) {
-			case ScrumPackage.PRODUCT__CAPABILITIES:
-			case ScrumPackage.PRODUCT__THEMES:
-			case ScrumPackage.PRODUCT__PRODUCT_USERS:
-			case ScrumPackage.PRODUCT__TARGET_GROUPS:
-			case ScrumPackage.PRODUCT__COMPONENTS:
+		switch (notification.getFeatureID(Customer.class)) {
+			case ScrumPackage.CUSTOMER__REQUESTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -216,28 +254,8 @@ public class ProductItemProvider extends AbstractProductItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ScrumPackage.Literals.PRODUCT__CAPABILITIES,
-				 ScrumFactory.eINSTANCE.createEpic()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ScrumPackage.Literals.PRODUCT__THEMES,
-				 ScrumFactory.eINSTANCE.createTheme()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ScrumPackage.Literals.PRODUCT__PRODUCT_USERS,
-				 ScrumFactory.eINSTANCE.createProductUser()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ScrumPackage.Literals.PRODUCT__TARGET_GROUPS,
-				 ScrumFactory.eINSTANCE.createTargetGroup()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ScrumPackage.Literals.PRODUCT__COMPONENTS,
-				 ScrumFactory.eINSTANCE.createComponent()));
+				(ScrumPackage.Literals.CUSTOMER__REQUESTS,
+				 ScrumFactory.eINSTANCE.createRequest()));
 	}
 
 }

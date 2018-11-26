@@ -7,11 +7,12 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.scrum.Component;
+import org.nasdanika.scrum.Customer;
 import org.nasdanika.scrum.Epic;
 import org.nasdanika.scrum.Interaction;
-import org.nasdanika.scrum.Party;
 import org.nasdanika.scrum.Product;
 import org.nasdanika.scrum.ProductUser;
+import org.nasdanika.scrum.Request;
 import org.nasdanika.scrum.ScrumPackage;
 import org.nasdanika.scrum.TargetGroup;
 import org.nasdanika.scrum.Theme;
@@ -24,10 +25,11 @@ import org.nasdanika.scrum.Theme;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getCustomers <em>Customers</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getRequests <em>Requests</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getThemes <em>Themes</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getProductUsers <em>Product Users</em>}</li>
- *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getCustomers <em>Customers</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getTargetGroups <em>Target Groups</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.ProductImpl#getInteractions <em>Interactions</em>}</li>
@@ -53,6 +55,16 @@ public class ProductImpl extends AbstractProductImpl implements Product {
 	@Override
 	protected EClass eStaticClass() {
 		return ScrumPackage.Literals.PRODUCT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Customer> getCustomers() {
+		return (EList<Customer>)eGet(ScrumPackage.Literals.PRODUCT__CUSTOMERS, true);
 	}
 
 	/**
@@ -91,16 +103,6 @@ public class ProductImpl extends AbstractProductImpl implements Product {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Party> getCustomers() {
-		return (EList<Party>)eGet(ScrumPackage.Literals.PRODUCT__CUSTOMERS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
 	public EList<TargetGroup> getTargetGroups() {
 		return (EList<TargetGroup>)eGet(ScrumPackage.Literals.PRODUCT__TARGET_GROUPS, true);
 	}
@@ -123,6 +125,16 @@ public class ProductImpl extends AbstractProductImpl implements Product {
 	@SuppressWarnings("unchecked")
 	public EList<Interaction> getInteractions() {
 		return (EList<Interaction>)eGet(ScrumPackage.Literals.PRODUCT__INTERACTIONS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Request> getRequests() {
+		return (EList<Request>)eGet(ScrumPackage.Literals.PRODUCT__REQUESTS, true);
 	}
 
 } //ProductImpl

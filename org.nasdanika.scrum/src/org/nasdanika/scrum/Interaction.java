@@ -15,6 +15,8 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.scrum.Interaction#getDate <em>Date</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Interaction#getCustomers <em>Customers</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Interaction#getRequests <em>Requests</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Interaction#getProducts <em>Products</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Interaction#getFunctionality <em>Functionality</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Interaction#getParticipant <em>Participant</em>}</li>
@@ -51,6 +53,42 @@ public interface Interaction extends ModelElement {
 	 * @generated
 	 */
 	void setDate(Date value);
+
+	/**
+	 * Returns the value of the '<em><b>Customers</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Customer}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Customer#getInteractions <em>Interactions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customers</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Customers</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getInteraction_Customers()
+	 * @see org.nasdanika.scrum.Customer#getInteractions
+	 * @model opposite="interactions"
+	 * @generated
+	 */
+	EList<Customer> getCustomers();
+
+	/**
+	 * Returns the value of the '<em><b>Requests</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Request}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Request#getInteractions <em>Interactions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Requests</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Requests</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getInteraction_Requests()
+	 * @see org.nasdanika.scrum.Request#getInteractions
+	 * @model opposite="interactions"
+	 * @generated
+	 */
+	EList<Request> getRequests();
 
 	/**
 	 * Returns the value of the '<em><b>Products</b></em>' reference list.

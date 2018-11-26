@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.nasdanika.scrum.Functionality#getCustomers <em>Customers</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Functionality#getFundings <em>Fundings</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Functionality#getSatisfies <em>Satisfies</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.Functionality#getFulfills <em>Fulfills</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Functionality#getDependencies <em>Dependencies</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Functionality#getDependants <em>Dependants</em>}</li>
  *   <li>{@link org.nasdanika.scrum.Functionality#getInteractions <em>Interactions</em>}</li>
@@ -67,8 +68,8 @@ public interface Functionality extends ModelElement {
 
 	/**
 	 * Returns the value of the '<em><b>Customers</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.scrum.Party}.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Party#getUsesFunctionality <em>Uses Functionality</em>}'.
+	 * The list contents are of type {@link org.nasdanika.scrum.Customer}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Customer#getUsesFunctionality <em>Uses Functionality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Customers</em>' reference list isn't clear,
@@ -77,11 +78,11 @@ public interface Functionality extends ModelElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Customers</em>' reference list.
 	 * @see org.nasdanika.scrum.ScrumPackage#getFunctionality_Customers()
-	 * @see org.nasdanika.scrum.Party#getUsesFunctionality
+	 * @see org.nasdanika.scrum.Customer#getUsesFunctionality
 	 * @model opposite="usesFunctionality"
 	 * @generated
 	 */
-	EList<Party> getCustomers();
+	EList<Customer> getCustomers();
 
 	/**
 	 * Returns the value of the '<em><b>Fundings</b></em>' containment reference list.
@@ -116,6 +117,24 @@ public interface Functionality extends ModelElement {
 	 * @generated
 	 */
 	EList<Need> getSatisfies();
+
+	/**
+	 * Returns the value of the '<em><b>Fulfills</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.scrum.Request}.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.scrum.Request#getFulfilledBy <em>Fulfilled By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fulfills</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fulfills</em>' reference list.
+	 * @see org.nasdanika.scrum.ScrumPackage#getFunctionality_Fulfills()
+	 * @see org.nasdanika.scrum.Request#getFulfilledBy
+	 * @model opposite="fulfilledBy"
+	 * @generated
+	 */
+	EList<Request> getFulfills();
 
 	/**
 	 * Returns the value of the '<em><b>Dependencies</b></em>' reference list.

@@ -68,6 +68,8 @@ public class ScrumFactoryImpl extends EFactoryImpl implements ScrumFactory {
 			case ScrumPackage.SCRUM_TEAM: return (EObject)createScrumTeam();
 			case ScrumPackage.DEVELOPMENT_TEAM: return (EObject)createDevelopmentTeam();
 			case ScrumPackage.PRODUCT: return (EObject)createProduct();
+			case ScrumPackage.CUSTOMER: return (EObject)createCustomer();
+			case ScrumPackage.REQUEST: return (EObject)createRequest();
 			case ScrumPackage.COMPONENT: return (EObject)createComponent();
 			case ScrumPackage.TARGET_GROUP: return (EObject)createTargetGroup();
 			case ScrumPackage.NEED: return (EObject)createNeed();
@@ -206,6 +208,26 @@ public class ScrumFactoryImpl extends EFactoryImpl implements ScrumFactory {
 	public Product createProduct() {
 		ProductImpl product = new ProductImpl();
 		return product;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Customer createCustomer() {
+		CustomerImpl customer = new CustomerImpl();
+		return customer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Request createRequest() {
+		RequestImpl request = new RequestImpl();
+		return request;
 	}
 
 	/**

@@ -279,6 +279,52 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Customer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CustomerItemProvider customerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Customer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCustomerAdapter() {
+		if (customerItemProvider == null) {
+			customerItemProvider = new CustomerItemProvider(this);
+		}
+
+		return customerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Request} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RequestItemProvider requestItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.scrum.Request}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRequestAdapter() {
+		if (requestItemProvider == null) {
+			requestItemProvider = new RequestItemProvider(this);
+		}
+
+		return requestItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.nasdanika.scrum.Component} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -779,6 +825,8 @@ public class ScrumItemProviderAdapterFactory extends ScrumAdapterFactory impleme
 		if (scrumTeamItemProvider != null) scrumTeamItemProvider.dispose();
 		if (developmentTeamItemProvider != null) developmentTeamItemProvider.dispose();
 		if (productItemProvider != null) productItemProvider.dispose();
+		if (customerItemProvider != null) customerItemProvider.dispose();
+		if (requestItemProvider != null) requestItemProvider.dispose();
 		if (componentItemProvider != null) componentItemProvider.dispose();
 		if (targetGroupItemProvider != null) targetGroupItemProvider.dispose();
 		if (needItemProvider != null) needItemProvider.dispose();

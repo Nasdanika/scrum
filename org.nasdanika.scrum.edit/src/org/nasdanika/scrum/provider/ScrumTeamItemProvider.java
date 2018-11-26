@@ -113,6 +113,7 @@ public class ScrumTeamItemProvider extends OrganizationItemProvider {
 			childrenFeatures.add(ScrumPackage.Literals.SCRUM_TEAM__PRODUCTS);
 			childrenFeatures.add(ScrumPackage.Literals.SCRUM_TEAM__TEAM_INTERACTIONS);
 			childrenFeatures.add(ScrumPackage.Literals.SCRUM_TEAM__RELEASES);
+			childrenFeatures.add(ScrumPackage.Literals.SCRUM_TEAM__CUSTOMERS);
 		}
 		return childrenFeatures;
 	}
@@ -172,6 +173,7 @@ public class ScrumTeamItemProvider extends OrganizationItemProvider {
 			case ScrumPackage.SCRUM_TEAM__PRODUCTS:
 			case ScrumPackage.SCRUM_TEAM__TEAM_INTERACTIONS:
 			case ScrumPackage.SCRUM_TEAM__RELEASES:
+			case ScrumPackage.SCRUM_TEAM__CUSTOMERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -213,6 +215,11 @@ public class ScrumTeamItemProvider extends OrganizationItemProvider {
 			(createChildParameter
 				(ScrumPackage.Literals.SCRUM_TEAM__RELEASES,
 				 ScrumFactory.eINSTANCE.createRelease()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScrumPackage.Literals.SCRUM_TEAM__CUSTOMERS,
+				 ScrumFactory.eINSTANCE.createCustomer()));
 	}
 
 }

@@ -7,10 +7,12 @@ import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.nasdanika.scrum.Customer;
 import org.nasdanika.scrum.Functionality;
 import org.nasdanika.scrum.Interaction;
 import org.nasdanika.scrum.Party;
 import org.nasdanika.scrum.Product;
+import org.nasdanika.scrum.Request;
 import org.nasdanika.scrum.ScrumPackage;
 
 /**
@@ -22,6 +24,8 @@ import org.nasdanika.scrum.ScrumPackage;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.scrum.impl.InteractionImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.InteractionImpl#getCustomers <em>Customers</em>}</li>
+ *   <li>{@link org.nasdanika.scrum.impl.InteractionImpl#getRequests <em>Requests</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.InteractionImpl#getProducts <em>Products</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.InteractionImpl#getFunctionality <em>Functionality</em>}</li>
  *   <li>{@link org.nasdanika.scrum.impl.InteractionImpl#getParticipant <em>Participant</em>}</li>
@@ -66,6 +70,26 @@ public class InteractionImpl extends ModelElementImpl implements Interaction {
 	 */
 	public void setDate(Date newDate) {
 		eSet(ScrumPackage.Literals.INTERACTION__DATE, newDate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Customer> getCustomers() {
+		return (EList<Customer>)eGet(ScrumPackage.Literals.INTERACTION__CUSTOMERS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Request> getRequests() {
+		return (EList<Request>)eGet(ScrumPackage.Literals.INTERACTION__REQUESTS, true);
 	}
 
 	/**
